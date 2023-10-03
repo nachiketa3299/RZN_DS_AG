@@ -47,6 +47,10 @@ namespace Stack
 				// Validate InitializeArray
 				if (!InitializeArray)
 				{
+					this->Capacity = 0;
+					this->Ptr_StackBottom = nullptr;
+					this->Ptr_StackCapacityTop = nullptr;
+					this->Ptr_StackSizeTop = nullptr;
 					return;
 				}
 				// Capacity
@@ -59,6 +63,7 @@ namespace Stack
 					this->Capacity = Stack::Implementation::Array<T>::InitCapacity;
 				}
 				this->Ptr_StackBottom = new T[this->Capacity];
+				this->Ptr_StackCapacityTop = this->Ptr_StackBottom + (this->Capacity - 1);
 				for (std::size_t i = 0; i < this->Capacity; ++i)
 				{
 					if (i <= InitializeArraySize - 1)
@@ -159,7 +164,7 @@ int main(void)
 	RStack IntegerStackInstance = RStack(InitArr, 11);
 	for (std::size_t i = 0; i < 95; ++i)
 	{
-		IntegerStackInstance.Push(i * 100);
+		IntegerStackInstance.Push(static_cast<int>(i * 100));
 	}
 
 
