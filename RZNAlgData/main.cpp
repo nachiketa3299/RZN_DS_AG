@@ -109,6 +109,7 @@ namespace Stack
 					delete this->Ptr_StackBottom;
 					this->Ptr_StackBottom = tPtr_StackBottom;
 					this->Ptr_StackSizeTop = this->Ptr_StackBottom + (NewSize - 1);
+					this->Capacity = NewStackCapacity;
 					++this->Size;
 				}
 				return;
@@ -156,6 +157,10 @@ int main(void)
 
 	int* InitArr = new int[11] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 	RStack IntegerStackInstance = RStack(InitArr, 11);
+	for (std::size_t i = 0; i < 95; ++i)
+	{
+		IntegerStackInstance.Push(i * 100);
+	}
 
 
 	std::cout << IntegerStackInstance.Top() << std::endl;
