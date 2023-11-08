@@ -1,10 +1,22 @@
-#include "GraphBuilder.h"
+/// @file GraphBuilder.cpp
+/// @author RZN
 
+#include "GraphBuilder.h"
 #include <algorithm>
 
 using namespace std;
 
-RGraphBuilder::RGraphBuilder(const vector<int>& vertices): vertices(vertices) {}
+RGraphBuilder::RGraphBuilder(EGWMod wmod, EGDirMod dirmod): 
+    wmod(wmod), 
+    dirmod(dirmod)
+{
+}
+RGraphBuilder::RGraphBuilder(const vector<int>& vertices, EGWMod wmod, EGDirMod dirmod): 
+    vertices(vertices), 
+    wmod(wmod), 
+    dirmod(dirmod) 
+{
+}
 
 RGraphBuilder& RGraphBuilder::AddWeightedEdge(const pair<int, int>& edge, int weight)
 {

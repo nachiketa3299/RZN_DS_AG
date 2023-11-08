@@ -137,6 +137,7 @@
     <ClCompile Include="UnionFind.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DSAGTypes.h" />
     <ClInclude Include="Graph.h" />
     <ClInclude Include="GraphBuilder.h" />
     <ClInclude Include="UnionFind.h" />

@@ -1,3 +1,6 @@
+/// @file Graph.cpp
+/// @author RZN
+
 #include <iostream>
 #include <algorithm>
 
@@ -54,7 +57,7 @@ int RGraph::MinPath() const
     {
         if (!uf.NodesHaveSameLastParent(get<0>(edge), get<1>(edge)))
         {
-            uf.MergeNodes(get<0>(edge), get<1>(edge));
+            uf.UnionNodes(get<0>(edge), get<1>(edge));
             min_edges.push_back(edge);
         }
     }
