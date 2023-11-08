@@ -8,6 +8,7 @@
 #include <cstddef>
 
 typedef std::size_t IndexType;
+typedef std::size_t SizeType;
 typedef int         DataType;
 typedef int         WeightType;
 

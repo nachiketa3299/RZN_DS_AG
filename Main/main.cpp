@@ -1,29 +1,19 @@
-#include <Graph.h>
+#include <StaticArray.h>
+
 #include <vector>
+#include <iostream>
+
+using namespace std;
 
 int main(void)
 {
-    RGraphBuilder* gb = new RGraphBuilder;
-    (*gb).AddVertices({0, 1, 2, 3, 4, 5, 6, 7, 8})
-        .AddWeightedEdge({ 0, 1 }, 4)
-        .AddWeightedEdge({ 0, 7 }, 8)
-        .AddWeightedEdge({ 1, 7 }, 11)
-        .AddWeightedEdge({ 1, 2 }, 8)
-        .AddWeightedEdge({ 2, 8 }, 2)
-        .AddWeightedEdge({ 2, 5 }, 4)
-        .AddWeightedEdge({ 2, 3 }, 7)
-        .AddWeightedEdge({ 3, 4 }, 9)
-        .AddWeightedEdge({ 3, 5 }, 14)
-        .AddWeightedEdge({ 4, 5 }, 10)
-        .AddWeightedEdge({ 5, 6 }, 2)
-        .AddWeightedEdge({ 6, 7 }, 1)
-        .AddWeightedEdge({ 6, 8 }, 6)
-        .AddWeightedEdge({ 7, 8 }, 7);
+    RStaticArray<int, 10> arr(10);
+    arr[9] = 100;
 
-    RGraph graph(*gb);
-    delete gb;
-    graph.Print();
-    graph.MinPath();
+    for (size_t i = 0; i < arr.size(); ++i)
+    {
+        cout << arr[i] << ' ';
+    }
 
 	return 0;
 }

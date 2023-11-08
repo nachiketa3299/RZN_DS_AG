@@ -1,17 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <ClInclude Include="StaticArray.h">
+      <Filter>Header Files\Linear Data Structure</Filter>
+    </ClInclude>
     <ClInclude Include="Graph.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Non-Linear Data Structure</Filter>
     </ClInclude>
     <ClInclude Include="UnionFind.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Algorithms</Filter>
     </ClInclude>
     <ClInclude Include="GraphBuilder.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Builders</Filter>
     </ClInclude>
     <ClInclude Include="DSAGTypes.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Cores</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -20,6 +23,24 @@
     </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{61f25982-28b3-4c40-822e-72e1c3b1dc29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Linear Data Structure">
+      <UniqueIdentifier>{588caaeb-4127-4d68-a7ea-bfe779317505}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Non-Linear Data Structure">
+      <UniqueIdentifier>{59dcbc8a-4b4e-4fc3-b8f0-7611d1e6d5fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Algorithms">
+      <UniqueIdentifier>{556888d9-f481-44d3-aade-afefe3f95323}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Builders">
+      <UniqueIdentifier>{38ddfbb9-17bf-4222-a79c-d724f821ee83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Cores">
+      <UniqueIdentifier>{ccf45308-3ff2-493a-8208-ff9dc490159e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Docs">
+      <UniqueIdentifier>{e9f7c457-ccf1-4682-bbac-7d4896467aa1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -34,6 +55,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\README.md" />
+    <None Include="..\README.md">
+      <Filter>Docs</Filter>
+    </None>
   </ItemGroup>
 </Project>
