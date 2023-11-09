@@ -5,8 +5,8 @@
 #define _UNION_FIND_H
 
 #include <vector>
+#include "DSAGTypes.h"
 
-typedef std::size_t IndexType;
 
 /// @class RUnionFind
 /// @brief 유니온-파인드 연산을 수행해 주는 클래스이다.

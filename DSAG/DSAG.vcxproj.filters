@@ -16,6 +16,18 @@
     <ClInclude Include="DSAGTypes.h">
       <Filter>Header Files\Cores</Filter>
     </ClInclude>
+    <ClInclude Include="Array_Interface.h">
+      <Filter>Header Files\ADTs</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicArray.h">
+      <Filter>Header Files\Linear Data Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="Array.h">
+      <Filter>Header Files\Linear Data Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="Printable_Interface.h">
+      <Filter>Header Files\Utility</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
@@ -41,6 +53,12 @@
     </Filter>
     <Filter Include="Docs">
       <UniqueIdentifier>{e9f7c457-ccf1-4682-bbac-7d4896467aa1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ADTs">
+      <UniqueIdentifier>{637ed283-9096-43a9-aa29-bd0b4796673d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utility">
+      <UniqueIdentifier>{359d4d26-09c0-4086-9c63-7c490738eacb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

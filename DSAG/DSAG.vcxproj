@@ -251,6 +251,10 @@
     <ClCompile Include="UnionFind.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Array.h" />
+    <ClInclude Include="Array_Interface.h" />
+    <ClInclude Include="DynamicArray.h" />
+    <ClInclude Include="Printable_Interface.h" />
     <ClInclude Include="StaticArray.h" />
     <ClInclude Include="DSAGTypes.h" />
     <ClInclude Include="Graph.h" />
