@@ -257,6 +257,7 @@
     <ClInclude Include="DSAG_Interface.h" />
     <ClInclude Include="DynamicArray.hpp" />
     <ClInclude Include="Graph_Interface.h" />
+    <ClInclude Include="Iterator.h" />
     <ClInclude Include="Iterator_Interface.h" />
     <ClInclude Include="Linear.hpp" />
     <ClInclude Include="Linear_Interface.h" />

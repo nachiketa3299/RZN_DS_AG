@@ -6,10 +6,12 @@
 
 #include "Array.hpp"
 
-/// @class RStaticArray
+namespace RArray
+{
+/// @class RArray::Static
 /// @short 정적 배열 클래스
 template <typename DataType, SizeType Size>
-class RStaticArray: 
+class Static: 
     public RArray<DataType>
 {
     using RLinear<DataType>::_size;
@@ -17,19 +19,21 @@ class RStaticArray:
     using RLinear<DataType>::_dptr;
 
 public: /* CONSTRUCTORS */
-    RStaticArray();
+    Static();
     /// @short 초기값이 있는 정적 배열 생성자.
     /// @param[in] init_val 배열의 전체 요소를 이 값으로 초기화한다. 
-    RStaticArray(const DataType& init_val);
-    virtual ~RStaticArray() {};
+    Static(const DataType& init_val);
+    virtual ~Static() {};
 public:
     void assign(const DataType& new_val, SizeType new_size) override;
 private:
     DataType _data[Size];
 };
+} // RArray
+
 
 template <typename DataType, SizeType Size>
-RStaticArray<DataType, Size>::RStaticArray():
+RArray::Static<DataType, Size>::Static():
     RArray<DataType>(Size)
 {
     this->_dptr = &_data[0];
@@ -37,7 +41,7 @@ RStaticArray<DataType, Size>::RStaticArray():
 }
 
 template <typename DataType, SizeType Size>
-RStaticArray<DataType, Size>::RStaticArray(const DataType& init_val): 
+RArray::Static<DataType, Size>::Static(const DataType& init_val): 
     RArray<DataType>(Size)
 {
     this->_dptr = &_data[0];
@@ -47,7 +51,7 @@ RStaticArray<DataType, Size>::RStaticArray(const DataType& init_val):
 }
 
 template<typename DataType, SizeType Size>
-inline void RStaticArray<DataType, Size>::assign(const DataType& new_val, SizeType new_size)
+void RArray::Static<DataType, Size>::assign(const DataType& new_val, SizeType new_size)
 {
     if (new_size == this->_size)
     {

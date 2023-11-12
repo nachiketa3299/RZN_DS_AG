@@ -6,10 +6,12 @@
 
 #include "Array.hpp"
 
+namespace RArray
+{
 /// @class RDyanmicArray
 /// @short 동적 배열 클래스
 template <typename DataType>
-class RDynamicArray: 
+class Dynamic: 
     public RArray<DataType>
 {
     using RLinear<DataType>::_size;
@@ -18,18 +20,18 @@ class RDynamicArray:
 
 public:  /* CONSTRUCTORS */
     /// @short 아무 인자가 없는 동적 배열 생성자. 초기 캐퍼시티로 영역을 동적으로 할당함.
-    RDynamicArray();
+    Dynamic();
 
     /// @short 초기 크기만 받는 동적 배열 생성자.
     /// @param[in] size 생성할 동적 배열의 크기
-    RDynamicArray(SizeType init_size);
+    Dynamic(SizeType init_size);
 
     /// @short 초기값이 있는 동적 배열 생성자
     /// @param[in] size 생성할 동적 배열의 크기
     /// @param[in] init_val 생성할 동적 배열의 각 원소가 초기화될 값
-    RDynamicArray(SizeType init_size, const DataType& init_val);
+    Dynamic(SizeType init_size, const DataType& init_val);
 
-    virtual ~RDynamicArray() { delete[] this->_dptr; };
+    virtual ~Dynamic() { delete[] this->_dptr; };
 
     SizeType capacity() const { return this->_capacity; };
 
@@ -39,9 +41,11 @@ public:  /* CONSTRUCTORS */
     void assign(const DataType& new_val, SizeType new_size) override;
     void push_back(const DataType& push_val);
 };
+} // RArray
+
 
 template <typename DataType>
-inline RDynamicArray<DataType>::RDynamicArray():
+RArray::Dynamic<DataType>::Dynamic():
     RArray<DataType>(ZERO_SIZE, INIT_CAPACITY)
 {
     /// 동적 할당
@@ -49,7 +53,7 @@ inline RDynamicArray<DataType>::RDynamicArray():
 }
 
 template<typename DataType>
-RDynamicArray<DataType>::RDynamicArray(SizeType init_size)
+RArray::Dynamic<DataType>::Dynamic(SizeType init_size)
 {
     this->_size = init_size;
     if (this->_capacity < this->_size)
@@ -60,7 +64,7 @@ RDynamicArray<DataType>::RDynamicArray(SizeType init_size)
 }
 
 template <typename DataType>
-RDynamicArray<DataType>::RDynamicArray(SizeType init_size, const DataType& init_val)
+RArray::Dynamic<DataType>::Dynamic(SizeType init_size, const DataType& init_val)
 {
     this->_size = init_size;
     if (this->_capacity < this->_size)
@@ -76,7 +80,7 @@ RDynamicArray<DataType>::RDynamicArray(SizeType init_size, const DataType& init_
 }
 
 template<typename DataType>
-inline void RDynamicArray<DataType>::resize(SizeType new_size)
+void RArray::Dynamic<DataType>::resize(SizeType new_size)
 {
     /// 새로운 사이즈가 현재 사이즈와 같으면 뭘 할 필요가 없음
     if (new_size == this->_size)
@@ -98,7 +102,7 @@ inline void RDynamicArray<DataType>::resize(SizeType new_size)
 }
 
 template<typename DataType>
-inline void RDynamicArray<DataType>::resize(SizeType new_size, const DataType& init_val)
+void RArray::Dynamic<DataType>::resize(SizeType new_size, const DataType& init_val)
 {
     /// 새로운 사이즈가 현재 사이즈와 같으면 뭘 할 필요가 없음
     if (new_size == this->_size)
@@ -124,7 +128,7 @@ inline void RDynamicArray<DataType>::resize(SizeType new_size, const DataType& i
 }
 
 template<typename DataType>
-inline void RDynamicArray<DataType>::reserve(SizeType new_capacity)
+void RArray::Dynamic<DataType>::reserve(SizeType new_capacity)
 {
     /// 새 캐퍼시티와 현재 캐퍼시티가 같으면 뭘 할 필요가 없음
     if (new_capacity == this->_capacity) 
@@ -150,7 +154,7 @@ inline void RDynamicArray<DataType>::reserve(SizeType new_capacity)
 }
 
 template<typename DataType>
-inline void RDynamicArray<DataType>::assign(const DataType& new_val, SizeType new_size)
+void RArray::Dynamic<DataType>::assign(const DataType& new_val, SizeType new_size)
 {
     this->resize(new_size);
     for (SizeType i = 0; i < this->_size; ++i)
@@ -159,7 +163,7 @@ inline void RDynamicArray<DataType>::assign(const DataType& new_val, SizeType ne
 }
 
 template<typename DataType>
-inline void RDynamicArray<DataType>::push_back(const DataType& push_val)
+void RArray::Dynamic<DataType>::push_back(const DataType& push_val)
 {
     this->resize(this->_size + 1);
     *(this->_dptr + this->_size - 1) = push_val;

@@ -8,9 +8,11 @@ using namespace std;
 
 int main(void)
 {
-    RDynamicArray<int> vec(1, 1);
-    RStaticArray<int, 10> arr;
+    RArray::Dynamic<int> vec(1, 1);
+    RArray::Static<int, 10> arr;
+
     arr.print_ds();
+
     if (!arr.empty())  cout << " Not Empty ! ";
 	return 0;
 }

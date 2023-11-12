@@ -49,6 +49,9 @@
     <ClInclude Include="Iterator_Interface.h">
       <Filter>Header Files\Iterators</Filter>
     </ClInclude>
+    <ClInclude Include="Iterator.h">
+      <Filter>Header Files\Iterators</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
