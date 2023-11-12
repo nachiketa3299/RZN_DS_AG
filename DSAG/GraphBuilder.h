@@ -6,7 +6,7 @@
 #define _GRAPH_BUILDER_H
 
 #include <vector>
-#include "DSAGTypes.h"
+#include "DSAG_Types.h"
 
 /// @enum EGDirMod
 /// @short 그래프의 간선의 방향성 여부를 나타낸다.

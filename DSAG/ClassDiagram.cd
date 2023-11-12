@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+  <Class Name="ILinear&lt;DataType&gt;">
+    <Position X="5.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAABAAAAAAAIIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Linear_Interface.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IArray&lt;DataType&gt;">
+    <Position X="5.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAQAAAAAEAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Array_Interface.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IPrintable">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Printable_Interface.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IDSAG">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DSAG_Interface.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RDSAG">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAQAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DSAG.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RLinear&lt;DataType&gt;">
+    <Position X="2" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAABAAAAAAAIIAAAQAQBAAAAACAAAAAAIAAAA=</HashCode>
+      <FileName>Linear.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RArray&lt;DataType&gt;">
+    <Position X="2" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAABAQAQAAAAAEAgAAAgACAAAAAAAA=</HashCode>
+      <FileName>Array.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RDynamicArray&lt;DataType&gt;">
+    <Position X="6.75" Y="8.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAEAAAAAAMAAAAAAAAAAkIAAQABAAAAACA=</HashCode>
+      <FileName>DynamicArray.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RStaticArray&lt;DataType, Size&gt;">
+    <Position X="2" Y="9.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>StaticArray.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Malgun Gothic" Size="9" />
+</ClassDiagram>

@@ -1,5 +1,5 @@
-#include <StaticArray.h>
-#include <DynamicArray.h>
+#include <StaticArray.hpp>
+#include <DynamicArray.hpp>
 
 #include <vector>
 #include <iostream>
@@ -8,21 +8,9 @@ using namespace std;
 
 int main(void)
 {
-    RStaticArray<int, 4> arr(5);
-
-    arr.size();
+    RDynamicArray<int> vec(1, 1);
+    RStaticArray<int, 10> arr;
     arr.print_ds();
-
-    for (size_t i = 0; i < arr.size(); ++i)
-        arr[i] += (int)i + 1; 
-
-    arr.print_ds();
-
-    RDynamicArray<int> vec(8, 10);
-    vec.print_ds();
-    for (size_t i = 0; i < vec.size(); ++i)
-        vec[i] += (int)i + 1;
-    vec.print_ds();
-
+    if (!arr.empty())  cout << " Not Empty ! ";
 	return 0;
 }

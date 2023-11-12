@@ -5,7 +5,7 @@
 #define _UNION_FIND_H
 
 #include <vector>
-#include "DSAGTypes.h"
+#include "DSAG_Types.h"
 
 
 /// @class RUnionFind
