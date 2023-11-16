@@ -246,6 +246,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BinarySearch.cpp" />
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="GraphBuilder.cpp" />
     <ClCompile Include="UnionFind.cpp" />
@@ -253,6 +254,7 @@
   <ItemGroup>
     <ClInclude Include="Array.hpp" />
     <ClInclude Include="Array_Interface.h" />
+    <ClInclude Include="BinarySearch.h" />
     <ClInclude Include="DSAG.h" />
     <ClInclude Include="DSAG_Interface.h" />
     <ClInclude Include="DynamicArray.hpp" />

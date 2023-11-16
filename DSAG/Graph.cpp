@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <algorithm>
+#include <set>
+#include <queue>
 
 #include "Graph.h"
 #include "UnionFind.h"
@@ -31,7 +33,21 @@ void RGraph::Print() const
     return;
 }
 
-int RGraph::MinPath() const
+int RGraph::MinPath(IndexType start_idx, IndexType end_idx, EGMinPathMod AlgMod) const
+{
+    switch (AlgMod)
+    {
+    case EGMinPathMod::Dijkstra:
+        return this->MinPath_Dijkstra(start_idx, end_idx);
+        break;
+    case EGMinPathMod::Kruskal:
+    default:
+        return this->MinPath_Kruskal();
+        break;
+    }
+}
+
+int RGraph::MinPath_Kruskal() const
 {
     vector<tuple<int, int, int>> edges;
     for (size_t vi = 0; vi < this->adj_list.size(); ++vi)
@@ -66,6 +82,36 @@ int RGraph::MinPath() const
     {
         cout << get<0>(edge) << "--(" << get<2>(edge) << ")--" << get<1>(edge) << '\n';
     }
+
+    return 0;
+}
+
+int RGraph::MinPath_Dijkstra(IndexType start_idx, IndexType end_idx) const
+{
+    using DistanceType = int;
+    static constexpr DistanceType START_DISTANCE = 0;
+    using VertexDistanceType = pair<IndexType, WeightType>;
+    static auto GetVertexIndex  = [](const VertexDistanceType& edge) { return edge.first;  };
+    static auto GetVertexWeight = [](const VertexDistanceType& edge) { return edge.second; };
+
+    struct tVertexDistance
+    {
+        tVertexDistance()
+        {
+            static IndexType cnt = 0;
+            this->idx = cnt++;
+        };
+        IndexType idx;
+        WeightType distance = numeric_limits<WeightType>::max();
+        bool operator>(const tVertexDistance& e) { return this->distance > e.distance; };
+    };
+
+    // PQ를 그냥 써야 함?
+
+    vector<tVertexDistance> distance_from_start_idx(this->vertices.size());
+    distance_from_start_idx[start_idx].distance = START_DISTANCE;
+
+    vector<IndexType> visited(this->vertices.size(), false);
 
     return 0;
 }

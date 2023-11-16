@@ -66,7 +66,7 @@ private:
     static bool LessWeightPred(const std::pair<int, int>&, const std::pair<int, int>&);
 private:
     std::vector<int> vertices;
-    std::vector<std::vector<std::pair<int, int>>> adj_list;
+    std::vector<std::vector<std::pair<IndexType, WeightType>>> adj_list;
 
     /// @short 그래프의 현재 방향성 상태를 나타낸다.
     EGDirMod dirmod;

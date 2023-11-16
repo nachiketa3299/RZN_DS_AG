@@ -52,6 +52,9 @@
     <ClInclude Include="Iterator.h">
       <Filter>Header Files\Iterators</Filter>
     </ClInclude>
+    <ClInclude Include="BinarySearch.h">
+      <Filter>Header Files\RDSAG</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
@@ -87,6 +90,9 @@
     <Filter Include="Header Files\Iterators">
       <UniqueIdentifier>{38e36b29-a4fb-41c4-8b44-526911f2e012}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\RDSAG">
+      <UniqueIdentifier>{4d079fab-dba0-4af1-8fcf-f76e98c76569}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Graph.cpp">
@@ -97,6 +103,9 @@
     </ClCompile>
     <ClCompile Include="GraphBuilder.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BinarySearch.cpp">
+      <Filter>Header Files\RDSAG</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
