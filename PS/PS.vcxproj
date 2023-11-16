@@ -248,7 +248,7 @@
     <ClInclude Include="PROG.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BOJ_2343.cpp" />
+    <ClCompile Include="BOJ_1920.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
