@@ -10,7 +10,7 @@ namespace RArray
 {
 /// @class RArray::Static
 /// @short 정적 배열 클래스
-template <typename DataType, SizeType Size>
+template <typename DataType, SizeType ArraySize>
 class Static: 
     public RArray<DataType>
 {
@@ -27,22 +27,22 @@ public: /* CONSTRUCTORS */
 public:
     void assign(const DataType& new_val, SizeType new_size) override;
 private:
-    DataType _data[Size];
+    DataType _data[ArraySize];
 };
 } // RArray
 
 
-template <typename DataType, SizeType Size>
-RArray::Static<DataType, Size>::Static():
-    RArray<DataType>(Size)
+template <typename DataType, SizeType ArraySize>
+RArray::Static<DataType, ArraySize>::Static():
+    RArray<DataType>(ArraySize)
 {
     this->_dptr = &_data[0];
     return;
 }
 
-template <typename DataType, SizeType Size>
-RArray::Static<DataType, Size>::Static(const DataType& init_val): 
-    RArray<DataType>(Size)
+template <typename DataType, SizeType ArraySize>
+RArray::Static<DataType, ArraySize>::Static(const DataType& init_val): 
+    RArray<DataType>(ArraySize)
 {
     this->_dptr = &_data[0];
     for (IndexType i = 0; i < this->_size; ++i)
@@ -50,8 +50,8 @@ RArray::Static<DataType, Size>::Static(const DataType& init_val):
     return;
 }
 
-template<typename DataType, SizeType Size>
-void RArray::Static<DataType, Size>::assign(const DataType& new_val, SizeType new_size)
+template<typename DataType, SizeType ArraySize>
+void RArray::Static<DataType, ArraySize>::assign(const DataType& new_val, SizeType new_size)
 {
     if (new_size == this->_size)
     {

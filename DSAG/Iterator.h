@@ -1,15 +1,39 @@
-/// @file Iterator.h
-/// @author RZN
+#ifndef _DSAG_ITERATOR_H
+#define _DSAG_ITERATOR_H
 
-#ifndef _ITERATOR_H
-#define _ITERATOR_H
+#include "CoreDefinition.h"
 
-class RIterator
+_DSAG_BEGIN
+
+template <typename Container>
+class InputIterator
 {
-public:
-    RIterator() {};
 };
 
+template <typename Container>
+class OutputIterator
+{
+};
 
-#endif // !_ITERATOR_H
+template <typename Container>
+class ForwardIterator:
+    public InputIterator<Container>,
+    public OutputIterator<Container>
+{
+};
 
+template <typename Container>
+class BidirectionalIterator:
+    public ForwardIterator<Container>
+{
+};
+
+template <typename Container>
+class RandomAccessIterator:
+    public BidirectionalIterator<Container>
+{
+};
+
+_DSAG_END
+
+#endif // !_DSAG_ITERATOR_H

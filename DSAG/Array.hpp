@@ -5,6 +5,7 @@
 #define _ARRAY_HPP
 
 #include "Linear.hpp"
+#include "Iterator.hpp"
 #include "Array_Interface.h"
 
 #include <iostream>
@@ -16,6 +17,10 @@ class RArray abstract:
     public RLinear<DataType>,
     public IArray<DataType>
 {
+public:
+    using DataType = DataType;
+    using Iterator = typename RRandomAccessIterator<RArray>;
+public:
     using RLinear<DataType>::_size;
     using RLinear<DataType>::_capacity;
 

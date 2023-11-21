@@ -252,24 +252,11 @@
     <ClCompile Include="UnionFind.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Array.hpp" />
-    <ClInclude Include="Array_Interface.h" />
     <ClInclude Include="BinarySearch.h" />
-    <ClInclude Include="DSAG.h" />
-    <ClInclude Include="DSAG_Interface.h" />
-    <ClInclude Include="DynamicArray.hpp" />
-    <ClInclude Include="Graph_Interface.h" />
-    <ClInclude Include="Iterator.h" />
-    <ClInclude Include="Iterator_Interface.h" />
-    <ClInclude Include="Linear.hpp" />
-    <ClInclude Include="Linear_Interface.h" />
-    <ClInclude Include="List_Interface.h" />
+    <ClInclude Include="CoreDefinition.h" />
     <ClInclude Include="Printable_Interface.h" />
-    <ClInclude Include="StaticArray.hpp" />
-    <ClInclude Include="DSAG_Types.h" />
     <ClInclude Include="Graph.h" />
-    <ClInclude Include="GraphBuilder.h" />
-    <ClInclude Include="UnionFind.h" />
+    <ClInclude Include="StaticArray.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md" />

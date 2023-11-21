@@ -1,16 +1,13 @@
-/// @file Iterator_Interface.h
-/// @author RZN
+#ifndef DSAG_ITERATOR_INTERFACE_H
+#define DSAG_ITERATOR_INTERFACE_H
 
-#ifndef _ITERATOR_INTERFACE_H
-#define _ITERATOR_INTERFACE_H
+#include "CoreDefinition.h"
 
-class IIterator abstract
+template <typename Container>
+class IForwardIterator abstract
 {
-public:
-    virtual IIterator* begin() abstract;
-    virtual IIterator* end() abstract;
+
 };
 
-#endif // !_ITERATOR_INTERFACE_H
 
-
+#endif // !DSAG_ITERATOR_INTERFACE_H
