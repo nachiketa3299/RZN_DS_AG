@@ -247,9 +247,6 @@
   <ItemGroup>
     <ClInclude Include="PROG.h" />
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="BOJ_14499_1121.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
