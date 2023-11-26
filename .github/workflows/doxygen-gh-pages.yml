@@ -8,8 +8,6 @@ jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout Repository
-              uses: actions/checkout@v2
             - name: Install Doxygen
               run: sudo apt-get install doxygen
             - name: Generate Doxygen Documentation
