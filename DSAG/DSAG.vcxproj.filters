@@ -1,19 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClInclude Include="Graph.h">
-      <Filter>Header Files\Non-Linear Data Structure</Filter>
-    </ClInclude>
-    <ClInclude Include="Printable_Interface.h">
+    <ClInclude Include="Includes\Printer.h">
       <Filter>Header Files\Utility</Filter>
     </ClInclude>
-    <ClInclude Include="BinarySearch.h">
-      <Filter>Header Files\RDSAG</Filter>
-    </ClInclude>
-    <ClInclude Include="StaticArray.h">
+    <ClInclude Include="Includes\StaticArray.h">
       <Filter>Header Files\Cores</Filter>
     </ClInclude>
-    <ClInclude Include="CoreDefinition.h">
+    <ClInclude Include="Includes\CoreDefinition.h">
       <Filter>Header Files\Cores</Filter>
     </ClInclude>
   </ItemGroup>
@@ -27,47 +21,18 @@
     <Filter Include="Header Files\Non-Linear Data Structure">
       <UniqueIdentifier>{59dcbc8a-4b4e-4fc3-b8f0-7611d1e6d5fe}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Algorithms">
-      <UniqueIdentifier>{556888d9-f481-44d3-aade-afefe3f95323}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Builders">
-      <UniqueIdentifier>{38ddfbb9-17bf-4222-a79c-d724f821ee83}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Cores">
       <UniqueIdentifier>{ccf45308-3ff2-493a-8208-ff9dc490159e}</UniqueIdentifier>
     </Filter>
     <Filter Include="Docs">
       <UniqueIdentifier>{e9f7c457-ccf1-4682-bbac-7d4896467aa1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\ADTs">
-      <UniqueIdentifier>{637ed283-9096-43a9-aa29-bd0b4796673d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Utility">
       <UniqueIdentifier>{359d4d26-09c0-4086-9c63-7c490738eacb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Iterators">
-      <UniqueIdentifier>{38e36b29-a4fb-41c4-8b44-526911f2e012}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\RDSAG">
+    <Filter Include="Header Files\SL 사용">
       <UniqueIdentifier>{4d079fab-dba0-4af1-8fcf-f76e98c76569}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Sequence">
-      <UniqueIdentifier>{588caaeb-4127-4d68-a7ea-bfe779317505}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Graph.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="UnionFind.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GraphBuilder.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BinarySearch.cpp">
-      <Filter>Header Files\RDSAG</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md">
