@@ -11,5 +11,5 @@ jobs:
             - name: Install Doxygen
               run: sudo apt-get install doxygen
             - name: Generate Doxygen Documentation
-              working-directory: ./Doxygen
+              working-directory: Doxygen
               run: doxygen Doxyfile
