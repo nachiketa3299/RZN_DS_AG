@@ -1,4 +1,4 @@
-name: Doxygen Github Pages Deploy Action
+name: Generate Doxygen Files for RZN DSAG projects
 
 on:
     push:
@@ -9,8 +9,8 @@ jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
-            - uses: DenverCoder/doxygen-github-pages-action@v1.3.0
+            - uses: mattonotmitt/doxygen-action@v1.9.5
               with:
-                  github_token: ${{ secrets.GITHUB_TOKEN }}
-                  folder: DSAG/Doxygen/Generated
-                  config: Doxyfile
+                  working-directory: './DSAG/'
+                  doxyfile-path: './Doxygen/Doxyfile'
+                  additional-packages: font-fira-code
