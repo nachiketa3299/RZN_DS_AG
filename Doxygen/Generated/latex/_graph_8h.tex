@@ -1,0 +1,47 @@
+\doxysection{DSAG/\+Sources/\+Graph.h File Reference}
+\hypertarget{_graph_8h}{}\label{_graph_8h}\index{DSAG/Sources/Graph.h@{DSAG/Sources/Graph.h}}
+{\ttfamily \#include "{}Graph\+Builder.\+h"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include "{}DSAG\+\_\+\+Types.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_r_graph}{RGraph}}
+\begin{DoxyCompactList}\small\item\em int 데이터 형에 대해서만 작동하는 그래프 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{_graph_8h_a09c0adbba9abc3d66e43d2b62ba34707}{EGMin\+Path\+Mod}} \{ \mbox{\hyperlink{_graph_8h_a09c0adbba9abc3d66e43d2b62ba34707a052d7289884a0d0dae24aa88a7e62e83}{Dijkstra}}
+, \mbox{\hyperlink{_graph_8h_a09c0adbba9abc3d66e43d2b62ba34707a062a5d99a7ab99b32b58f4c4d9351c20}{Kruskal}}
+ \}
+\begin{DoxyCompactList}\small\item\em 그래프의 최소/최대 가중치 경로합을 탐색하는 데에 어떤 알고리즘을 쓸 것인지 (가중치가 양수인 경우) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+RZN 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{_graph_8h_a09c0adbba9abc3d66e43d2b62ba34707}\label{_graph_8h_a09c0adbba9abc3d66e43d2b62ba34707} 
+\index{Graph.h@{Graph.h}!EGMinPathMod@{EGMinPathMod}}
+\index{EGMinPathMod@{EGMinPathMod}!Graph.h@{Graph.h}}
+\doxysubsubsection{\texorpdfstring{EGMinPathMod}{EGMinPathMod}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{_graph_8h_a09c0adbba9abc3d66e43d2b62ba34707}{EGMin\+Path\+Mod}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+그래프의 최소/최대 가중치 경로합을 탐색하는 데에 어떤 알고리즘을 쓸 것인지 (가중치가 양수인 경우) 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Dijkstra@{Dijkstra}!Graph.h@{Graph.h}}\index{Graph.h@{Graph.h}!Dijkstra@{Dijkstra}}}\Hypertarget{_graph_8h_a09c0adbba9abc3d66e43d2b62ba34707a052d7289884a0d0dae24aa88a7e62e83}\label{_graph_8h_a09c0adbba9abc3d66e43d2b62ba34707a052d7289884a0d0dae24aa88a7e62e83} 
+Dijkstra&다익스트라(\+Dijstra) 알고리즘 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Kruskal@{Kruskal}!Graph.h@{Graph.h}}\index{Graph.h@{Graph.h}!Kruskal@{Kruskal}}}\Hypertarget{_graph_8h_a09c0adbba9abc3d66e43d2b62ba34707a062a5d99a7ab99b32b58f4c4d9351c20}\label{_graph_8h_a09c0adbba9abc3d66e43d2b62ba34707a062a5d99a7ab99b32b58f4c4d9351c20} 
+Kruskal&크루스칼(\+Kruskal) 알고리즘 \\
+\hline
+
+\end{DoxyEnumFields}

@@ -1,0 +1,392 @@
+\doxysection{Static\+Array\texorpdfstring{$<$}{<} T, Size \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_static_array}{}\label{class_static_array}\index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
+
+
+고정 크기 배열을 캡슐화하는 컨테이너  
+
+
+
+
+{\ttfamily \#include $<$Static\+Array.\+h$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_static_array_ad9faea26cf83fbb0471d46044a6b7c65}\label{class_static_array_ad9faea26cf83fbb0471d46044a6b7c65} 
+using {\bfseries Element\+Type} = T
+\item 
+\Hypertarget{class_static_array_ae19717695f3d3d41ea27e91c4b6e1419}\label{class_static_array_ae19717695f3d3d41ea27e91c4b6e1419} 
+using {\bfseries Size\+Type} = std\+::size\+\_\+t
+\item 
+\Hypertarget{class_static_array_a3b32b885b333e6bc64d37a60bf3e6751}\label{class_static_array_a3b32b885b333e6bc64d37a60bf3e6751} 
+using {\bfseries Iterator} = \mbox{\hyperlink{class___static_array___iterator}{\+\_\+\+Static\+Array\+\_\+\+Iterator}}$<$ T, Size $>$
+\item 
+\Hypertarget{class_static_array_ae982d179e6be526d4d87417b27496a68}\label{class_static_array_ae982d179e6be526d4d87417b27496a68} 
+using {\bfseries Reverse\+Iterator} = int
+\item 
+\Hypertarget{class_static_array_a8f420dbbe3820243aa1e770ef23f1af3}\label{class_static_array_a8f420dbbe3820243aa1e770ef23f1af3} 
+using {\bfseries Difference\+Type} = std\+::ptrdiff\+\_\+t
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_static_array_a055353f7cfbfe114aeab162941d0f64b}\label{class_static_array_a055353f7cfbfe114aeab162941d0f64b} 
+{\bfseries Static\+Array} ()=default
+\begin{DoxyCompactList}\small\item\em Default-\/\+Constructible. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_static_array_a4f8a6f63d1957478082d87e9bd0a6a05}{Static\+Array}} (const \mbox{\hyperlink{class_static_array}{Static\+Array}} \&right)
+\begin{DoxyCompactList}\small\item\em Copy-\/\+Constructible. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_static_array}{Static\+Array}} \& \mbox{\hyperlink{class_static_array_ad8b332b6a9d8cea23c0013745cd0defb}{operator=}} (const \mbox{\hyperlink{class_static_array}{Static\+Array}} \&right)
+\begin{DoxyCompactList}\small\item\em Copy-\/\+Assignable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_static_array_a01788362dfb47c5bb3b1bd62dd0d11f2}{Static\+Array}} (const \mbox{\hyperlink{class_static_array}{Static\+Array}} \&\&to\+\_\+move) noexcept
+\begin{DoxyCompactList}\small\item\em Move-\/\+Constructible. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_static_array}{Static\+Array}} \& \mbox{\hyperlink{class_static_array_afbad5ff940975a89a3fb6500a8ee9a30}{operator=}} (const \mbox{\hyperlink{class_static_array}{Static\+Array}} \&\&to\+\_\+move)
+\begin{DoxyCompactList}\small\item\em Move-\/\+Assignable. \end{DoxyCompactList}\item 
+\Hypertarget{class_static_array_a442a5ea4e204474e712981be166f133a}\label{class_static_array_a442a5ea4e204474e712981be166f133a} 
+{\bfseries Static\+Array} (const T \&to\+\_\+fill)
+\item 
+constexpr Element\+Type \& \mbox{\hyperlink{class_static_array_a45c6766f633b6983144e74b08cae23d8}{operator\mbox{[}$\,$\mbox{]}}} (Size\+Type index)
+\begin{DoxyCompactList}\small\item\em {\ttfamily index} 로 지정된 위치의 요소에 대한 참조를 반환한다. \end{DoxyCompactList}\item 
+constexpr const Element\+Type \& \mbox{\hyperlink{class_static_array_a01ed578ae36779c3a70fba79004b0588}{operator\mbox{[}$\,$\mbox{]}}} (Size\+Type index) const
+\begin{DoxyCompactList}\small\item\em {\ttfamily index} 로 지정된 위치의 요소에 대한 상수 참조를 반환한다. \end{DoxyCompactList}\item 
+constexpr Element\+Type \& \mbox{\hyperlink{class_static_array_ac8004068309188762a2eff4a8b3222d8}{At}} (Size\+Type index)
+\begin{DoxyCompactList}\small\item\em {\ttfamily index} 로 지정된 위치의 요소에 대한 참조를 반환한다. \end{DoxyCompactList}\item 
+constexpr const Element\+Type \& \mbox{\hyperlink{class_static_array_ab7095adf7625cf754024b64738f8bcdc}{At}} (Size\+Type index) const
+\begin{DoxyCompactList}\small\item\em {\ttfamily index} 로 지정된 위치의 요소에 대한 상수 참조를 반환한다. \end{DoxyCompactList}\item 
+constexpr Element\+Type \& \mbox{\hyperlink{class_static_array_aa9e48970e252c4122c2bb9895cc006c7}{Front}} ()
+\begin{DoxyCompactList}\small\item\em 컨테이너의 첫 번째 요소에 대한 참조를 반환한다. \end{DoxyCompactList}\item 
+constexpr const Element\+Type \& \mbox{\hyperlink{class_static_array_abae91424f3d9e93bc691c48ea3f6b831}{Front}} () const
+\begin{DoxyCompactList}\small\item\em 컨테이너의 첫 번째 요소에 대한 상수 참조를 반환한다. \end{DoxyCompactList}\item 
+constexpr Element\+Type \& \mbox{\hyperlink{class_static_array_af837adcebf87480bc3b3c7e0b4c39700}{Back}} ()
+\begin{DoxyCompactList}\small\item\em 컨테이너의 마지막 요소에 대한 참조를 반환한다. \end{DoxyCompactList}\item 
+constexpr const Element\+Type \& \mbox{\hyperlink{class_static_array_ad85303c3801ed52e9519b37636ea16eb}{Back}} () const
+\begin{DoxyCompactList}\small\item\em 컨테이너의 마지막 원소에 대한 상수 참조를 반환한다. \end{DoxyCompactList}\item 
+constexpr void \mbox{\hyperlink{class_static_array_ae813a34fcc9c668d91714f1c4b5ae6ac}{Fill\+Range}} (const Element\+Type \&to\+\_\+fill, Size\+Type range\+\_\+start=\mbox{\hyperlink{_static_array_8h_a637cd4cb57ee325fdc4ec85540a7071f}{DSAG\+\_\+\+ARRAY\+\_\+\+START\+\_\+\+INDEX}}, Size\+Type range\+\_\+end=Size)
+\begin{DoxyCompactList}\small\item\em {\ttfamily range\+\_\+start} 이상 {\ttfamily range\+\_\+end} 미만의 원소를 {\ttfamily to\+\_\+fill} 로 채운다. \end{DoxyCompactList}\item 
+constexpr void \mbox{\hyperlink{class_static_array_aaffa96c04ba99bfa22c470ba03774c69}{Swap}} (\mbox{\hyperlink{class_static_array}{Static\+Array}} \&other) noexcept
+\begin{DoxyCompactList}\small\item\em 현재 컨테이너의 내용을 {\ttfamily other} 컨테이너의 내용과 교체한다. \end{DoxyCompactList}\item 
+constexpr Element\+Type \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_static_array_af31a1ffafe5932a04ba7452c85cdbbc7}{Get\+Ptr}} () noexcept
+\begin{DoxyCompactList}\small\item\em 현재 컨테이너의 첫 번째 원소 주소를 반환한다. \end{DoxyCompactList}\item 
+constexpr Size\+Type \mbox{\hyperlink{class_static_array_a64e3d85b3298c1d60c2dfb8f61f2ea0a}{Get\+Size}} () const noexcept
+\begin{DoxyCompactList}\small\item\em 현재 컨테이너의 크기를 반환한다. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Related Symbols}
+(Note that these are not member symbols.) \begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{class___static_array___iterator}{Iterator}} \mbox{\hyperlink{class_static_array_a3eda6e455c4a37e9c19c0e8a3667a287}{Begin}} () noexcept
+\begin{DoxyCompactList}\small\item\em 현재 컨테이너의 시작 반복자를 반환 \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class___static_array___iterator}{Iterator}} \mbox{\hyperlink{class_static_array_a68ab4cacbe30def955d925d57c9233ff}{End}} () noexcept
+\begin{DoxyCompactList}\small\item\em 현재 컨테이너의 끝 반복자를 반환 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, std\+::size\+\_\+t Size$>$\newline
+class Static\+Array$<$ T, Size $>$}
+고정 크기 배열을 캡슐화하는 컨테이너 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_static_array_a4f8a6f63d1957478082d87e9bd0a6a05}\label{class_static_array_a4f8a6f63d1957478082d87e9bd0a6a05} 
+\index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!StaticArray@{StaticArray}}
+\index{StaticArray@{StaticArray}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{StaticArray()}{StaticArray()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+\mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\mbox{\hyperlink{class_static_array}{\+::\+Static\+Array}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$ \&}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy-\/\+Constructible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em right} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_static_array_a01788362dfb47c5bb3b1bd62dd0d11f2}\label{class_static_array_a01788362dfb47c5bb3b1bd62dd0d11f2} 
+\index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!StaticArray@{StaticArray}}
+\index{StaticArray@{StaticArray}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{StaticArray()}{StaticArray()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+\mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\mbox{\hyperlink{class_static_array}{\+::\+Static\+Array}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$ \&\&}]{to\+\_\+move }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Move-\/\+Constructible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em to\+\_\+move} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_static_array_ac8004068309188762a2eff4a8b3222d8}\label{class_static_array_ac8004068309188762a2eff4a8b3222d8} 
+\index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!At@{At}}
+\index{At@{At}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{At()}{At()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+constexpr Element\+Type \& \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+At (\begin{DoxyParamCaption}\item[{Size\+Type}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+{\ttfamily index} 로 지정된 위치의 요소에 대한 참조를 반환한다. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & 접근할 요소의 인덱스 값 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+유효한 {\ttfamily index} 범위를 검사한다. ~\newline
+ 
+\end{DoxyNote}
+\Hypertarget{class_static_array_ab7095adf7625cf754024b64738f8bcdc}\label{class_static_array_ab7095adf7625cf754024b64738f8bcdc} 
+\index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!At@{At}}
+\index{At@{At}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{At()}{At()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+constexpr const Element\+Type \& \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+At (\begin{DoxyParamCaption}\item[{Size\+Type}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+{\ttfamily index} 로 지정된 위치의 요소에 대한 상수 참조를 반환한다. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & 접근할 요소의 인덱스 값 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+유효한 {\ttfamily index} 범위를 검사한다. ~\newline
+ 
+\end{DoxyNote}
+\Hypertarget{class_static_array_af837adcebf87480bc3b3c7e0b4c39700}\label{class_static_array_af837adcebf87480bc3b3c7e0b4c39700} 
+\index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!Back@{Back}}
+\index{Back@{Back}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{Back()}{Back()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+constexpr Element\+Type \& \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+Back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+컨테이너의 마지막 요소에 대한 참조를 반환한다. 
+
+\begin{DoxyReturn}{Returns}
+컨테이너의 마지막 원소에 대한 l-\/value 참조 
+\end{DoxyReturn}
+\Hypertarget{class_static_array_ad85303c3801ed52e9519b37636ea16eb}\label{class_static_array_ad85303c3801ed52e9519b37636ea16eb} 
+\index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!Back@{Back}}
+\index{Back@{Back}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{Back()}{Back()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+constexpr const Element\+Type \& \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+Back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+컨테이너의 마지막 원소에 대한 상수 참조를 반환한다. 
+
+\begin{DoxyReturn}{Returns}
+컨테이너의 마지막 원소에 대한 l-\/value 상수 참조 
+\end{DoxyReturn}
+\Hypertarget{class_static_array_ae813a34fcc9c668d91714f1c4b5ae6ac}\label{class_static_array_ae813a34fcc9c668d91714f1c4b5ae6ac} 
+\index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!FillRange@{FillRange}}
+\index{FillRange@{FillRange}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{FillRange()}{FillRange()}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+constexpr void \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+Fill\+Range (\begin{DoxyParamCaption}\item[{const Element\+Type \&}]{to\+\_\+fill,  }\item[{Size\+Type}]{range\+\_\+start = {\ttfamily \mbox{\hyperlink{_static_array_8h_a637cd4cb57ee325fdc4ec85540a7071f}{DSAG\+\_\+\+ARRAY\+\_\+\+START\+\_\+\+INDEX}}},  }\item[{Size\+Type}]{range\+\_\+end = {\ttfamily Size} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+{\ttfamily range\+\_\+start} 이상 {\ttfamily range\+\_\+end} 미만의 원소를 {\ttfamily to\+\_\+fill} 로 채운다. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em to\+\_\+fill} & 채울 값 \\
+\hline
+\mbox{\texttt{ in}}  & {\em range\+\_\+start} & 채울 범위의 시작 인덱스 \\
+\hline
+\mbox{\texttt{ in}}  & {\em range\+\_\+end} & 채울 범위의 마지막 인덱스 + 1 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_static_array_aa9e48970e252c4122c2bb9895cc006c7}\label{class_static_array_aa9e48970e252c4122c2bb9895cc006c7} 
+\index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!Front@{Front}}
+\index{Front@{Front}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{Front()}{Front()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+constexpr Element\+Type \& \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+Front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+컨테이너의 첫 번째 요소에 대한 참조를 반환한다. 
+
+\begin{DoxyReturn}{Returns}
+컨테이너의 첫 번째 원소에 대한 l-\/value 참조 
+\end{DoxyReturn}
+\Hypertarget{class_static_array_abae91424f3d9e93bc691c48ea3f6b831}\label{class_static_array_abae91424f3d9e93bc691c48ea3f6b831} 
+\index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!Front@{Front}}
+\index{Front@{Front}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{Front()}{Front()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+constexpr const Element\+Type \& \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+Front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+컨테이너의 첫 번째 요소에 대한 상수 참조를 반환한다. 
+
+\begin{DoxyReturn}{Returns}
+컨테이너의 첫 번째 원소에 대한 l-\/value 상수 참조 
+\end{DoxyReturn}
+\Hypertarget{class_static_array_af31a1ffafe5932a04ba7452c85cdbbc7}\label{class_static_array_af31a1ffafe5932a04ba7452c85cdbbc7} 
+\index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!GetPtr@{GetPtr}}
+\index{GetPtr@{GetPtr}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{GetPtr()}{GetPtr()}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+constexpr Element\+Type \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+Get\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+현재 컨테이너의 첫 번째 원소 주소를 반환한다. 
+
+\begin{DoxyReturn}{Returns}
+첫 번째 원소의 주소 
+\end{DoxyReturn}
+\Hypertarget{class_static_array_a64e3d85b3298c1d60c2dfb8f61f2ea0a}\label{class_static_array_a64e3d85b3298c1d60c2dfb8f61f2ea0a} 
+\index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+constexpr Size\+Type \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+현재 컨테이너의 크기를 반환한다. 
+
+\begin{DoxyReturn}{Returns}
+현재 컨테이너의 크기 
+\end{DoxyReturn}
+\Hypertarget{class_static_array_afbad5ff940975a89a3fb6500a8ee9a30}\label{class_static_array_afbad5ff940975a89a3fb6500a8ee9a30} 
+\index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+\mbox{\hyperlink{class_static_array}{Static\+Array}} \& \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$ \&\&}]{to\+\_\+move }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move-\/\+Assignable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em to\+\_\+move} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_static_array_ad8b332b6a9d8cea23c0013745cd0defb}\label{class_static_array_ad8b332b6a9d8cea23c0013745cd0defb} 
+\index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+\mbox{\hyperlink{class_static_array}{Static\+Array}} \& \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$ \&}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy-\/\+Assignable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em right} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_static_array_a45c6766f633b6983144e74b08cae23d8}\label{class_static_array_a45c6766f633b6983144e74b08cae23d8} 
+\index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+constexpr Element\+Type \& \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{Size\+Type}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+{\ttfamily index} 로 지정된 위치의 요소에 대한 참조를 반환한다. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & 접근할 요소의 인덱스 값 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+유효한 {\ttfamily index} 인지 검사하지 않는다. 
+\end{DoxyWarning}
+\Hypertarget{class_static_array_a01ed578ae36779c3a70fba79004b0588}\label{class_static_array_a01ed578ae36779c3a70fba79004b0588} 
+\index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+constexpr const Element\+Type \& \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{Size\+Type}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+{\ttfamily index} 로 지정된 위치의 요소에 대한 상수 참조를 반환한다. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & 접근할 요소의 인덱스 값 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+유효한 {\ttfamily index} 인지 검사하지 않는다. 
+\end{DoxyWarning}
+\Hypertarget{class_static_array_aaffa96c04ba99bfa22c470ba03774c69}\label{class_static_array_aaffa96c04ba99bfa22c470ba03774c69} 
+\index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!Swap@{Swap}}
+\index{Swap@{Swap}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{Swap()}{Swap()}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+constexpr void \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+Swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+현재 컨테이너의 내용을 {\ttfamily other} 컨테이너의 내용과 교체한다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & 현재 컨테이너와 교체할 컨테이너 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_static_array_a3eda6e455c4a37e9c19c0e8a3667a287}\label{class_static_array_a3eda6e455c4a37e9c19c0e8a3667a287} 
+\index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!Begin@{Begin}}
+\index{Begin@{Begin}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{Begin()}{Begin()}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+constexpr \mbox{\hyperlink{class___static_array___iterator}{Iterator}} Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [related]}}
+
+
+
+현재 컨테이너의 시작 반복자를 반환 
+
+\begin{DoxyReturn}{Returns}
+현재 컨테이너의 시작 반복자 \doxylink{class___static_array___iterator}{\+\_\+\+Static\+Array\+\_\+\+Iterator} 
+\end{DoxyReturn}
+\Hypertarget{class_static_array_a68ab4cacbe30def955d925d57c9233ff}\label{class_static_array_a68ab4cacbe30def955d925d57c9233ff} 
+\index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!End@{End}}
+\index{End@{End}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{End()}{End()}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+constexpr \mbox{\hyperlink{class___static_array___iterator}{Iterator}} End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [related]}}
+
+
+
+현재 컨테이너의 끝 반복자를 반환 
+
+\begin{DoxyReturn}{Returns}
+현재 컨테이너의 끝 반복자 \doxylink{class___static_array___iterator}{\+\_\+\+Static\+Array\+\_\+\+Iterator} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+DSAG/\+Includes/\mbox{\hyperlink{_static_array_8h}{Static\+Array.\+h}}\end{DoxyCompactItemize}

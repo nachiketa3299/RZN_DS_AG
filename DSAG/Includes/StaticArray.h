@@ -8,11 +8,34 @@
 
 #include "CoreDefinition.h"
 
+/*!
+* @brief 배열의 시작 인덱스 정의
+*/
 #define DSAG_ARRAY_START_INDEX 0
+
+/*!
+* @brief 정적 배열의 종료 인덱스 정의
+*/
 #define DSAG_ARRAY_LAST_INDEX Size - 1
+
+/*!
+* @brief 정적 배열의 마지막 범위 정의. 정적 배열의 크기와 일치.
+*/
 #define DSAG_ARRAY_LAST_RANGE Size
+
+/*!
+* @brief 정적 배열의 인덱스 접근 함수 몸체
+*/
 #define DSAG_ARRAY_STATIC_ACCESS_BODY_INDEX return this->elements[index];
+
+/*!
+* @brief 정적 배열의 시작 원소 접근 함수 몸체
+*/
 #define DSAG_ARRAY_STATIC_ACCESS_BODY_FRONT return this->elements[0];
+
+/*!
+* @brief 정적 배열의 마지막 원소 접근 함수 몸체
+*/
 #define DSAG_ARRAY_STATIC_ACCESS_BODY_BACK return this->elements[Size - 1];
 
 _DSAG_BEGIN
@@ -36,32 +59,78 @@ public:
         ptr(ptr), offset(offset)
     { }
 public:
+    /*!
+     * @brief 정적 배열 반복자의 전위 증가 연산자 오버로딩
+     * @return 본인에 대한 l-value 참조
+    */
     _StaticArray_Iterator& operator++() noexcept
     {
         ++this->offset;
         return *this;
     }
+
+    /*!
+     * @brief 정적 배열 반복자의 후위 증가 연산자 오버로딩
+     * @return 후위 증가 연산자에 의해 변경되기 이전 본인에 대한 pr-value 사본
+    */
     _StaticArray_Iterator operator++(int) noexcept
     {
         _StaticArray_Iterator temp = *this;
         ++(*this);
         return temp;
     } 
+
+    /*!
+     * @brief 정적 배열 반복자의 전위 감소 연산자 오버로딩
+     * @return 본인에 대한 l-value 참조
+    */
     _StaticArray_Iterator& operator--() noexcept
     {
         --this->offset;
         return *this;
     }
+
+    /*!
+     * @brief 정적 배열 반복자의 후위 감소 연산자 오버로딩
+     * @return 후위 감소 연산자에 의해 변경되기 이전 본인에 대한 pr-value 사본
+    */
     _StaticArray_Iterator operator--(int) noexcept
     {
         _StaticArray_Iterator temp = *this;
         --(*this);
         return temp;
     }
+
+    /*!
+     * @brief 정적 배열 반복자의 포인터 멤버 접근 연산자(Pointer to Member) 오버로딩
+     * @todo 제대로 이해하고 다시 주석을 달 필요가 있다.
+    */
     constexpr ElementType* operator->() const noexcept
     {
-
+        return this->ptr + this->offset;
     }
+
+    constexpr bool operator==(const _StaticArray_Iterator& right) const noexcept
+    {
+        return this->offset == right.offset;
+    }
+    constexpr bool operator!=(const _StaticArray_Iterator& right) const noexcept
+    {
+        return this->offset != right.offset;
+    }
+    constexpr bool operator>(const _StaticArray_Iterator& right) const  noexcept
+    {
+        return this->offset > right.offset;
+    }
+    constexpr bool operator<(const _StaticArray_Iterator& right) const noexcept
+    {
+        return this->offset < right.offset;
+    }
+    constexpr ElementType& operator*() const noexcept
+    {
+        return *(this->operator->());
+    }
+
 private:
     ElementType* ptr;
     SizeType offset;
@@ -266,11 +335,23 @@ public: // Element Access
     {
         return Size;
     }
+
 public:
+    /*!
+     * @brief 현재 컨테이너의 시작 반복자를 반환
+     * @return 현재 컨테이너의 시작 반복자
+     * @relatesalso @ref _StaticArray_Iterator
+    */
     constexpr Iterator Begin() noexcept
     {
         return Iterator(this->elements, DSAG_ARRAY_START_INDEX);
     }
+
+    /*!
+     * @brief 현재 컨테이너의 끝 반복자를 반환
+     * @return 현재 컨테이너의 끝 반복자
+     * @relatesalso @ref _StaticArray_Iterator
+    */
     constexpr Iterator End() noexcept
     {
         return Iterator(this->elements, DSAG_ARRAY_LAST_RANGE);

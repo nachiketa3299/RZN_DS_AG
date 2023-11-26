@@ -1,0 +1,40 @@
+\doxysection{Printer.\+h}
+\hypertarget{_printer_8h_source}{}\label{_printer_8h_source}\index{DSAG/Includes/Printer.h@{DSAG/Includes/Printer.h}}
+\mbox{\hyperlink{_printer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ DSAG\_PRINTER\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ DSAG\_PRINTER\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_core_definition_8h}{CoreDefinition.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_static_array_8h}{StaticArray.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \mbox{\hyperlink{_core_definition_8h_a6b6b4f5342f42ea589f4becbc193496e}{\_DSAG\_BEGIN}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Container>}
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ Print(\textcolor{keyword}{const}\ Container\&\ container)}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00020\ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ std::\textcolor{keywordtype}{size\_t}\ Size>}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ Print(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_static_array}{StaticArray<T,\ Size>}}\&\ arr)}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[\ "{}};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ i\ =\ 0;\ i\ <\ Size;\ ++i)}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ std::cout\ <<\ arr[i]\ <<\ (i\ ==\ Size\ -\/\ 1\ ?\ \textcolor{stringliteral}{"{}\ ]\(\backslash\)n"{}}\ :\ \textcolor{stringliteral}{"{},\ "{}});}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00029\ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \mbox{\hyperlink{_core_definition_8h_ab5433dabd792da30d082c74a57fd75ed}{\_DSAG\_END}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !DSAG\_PRINTER\_H}}
+
+\end{DoxyCode}

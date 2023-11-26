@@ -1,0 +1,135 @@
+\doxysection{\+\_\+\+Static\+Array\+\_\+\+Iterator\texorpdfstring{$<$}{<} T, Size \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class___static_array___iterator}{}\label{class___static_array___iterator}\index{\_StaticArray\_Iterator$<$ T, Size $>$@{\_StaticArray\_Iterator$<$ T, Size $>$}}
+
+
+\doxylink{class_static_array}{Static\+Array} 에 대한 반복자 클래스  
+
+
+
+
+{\ttfamily \#include $<$Static\+Array.\+h$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class___static_array___iterator_a50bae90d7a7f95688853d4679dcb676a}\label{class___static_array___iterator_a50bae90d7a7f95688853d4679dcb676a} 
+using {\bfseries Element\+Type} = T
+\item 
+\Hypertarget{class___static_array___iterator_afadd9860d7813a5c5a01c5add9e19d3a}\label{class___static_array___iterator_afadd9860d7813a5c5a01c5add9e19d3a} 
+using {\bfseries Size\+Type} = std\+::size\+\_\+t
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class___static_array___iterator_a98af36afbded108267335d303fbc7ed4}\label{class___static_array___iterator_a98af36afbded108267335d303fbc7ed4} 
+constexpr {\bfseries \+\_\+\+Static\+Array\+\_\+\+Iterator} (Element\+Type \texorpdfstring{$\ast$}{*}ptr, Size\+Type offset=\mbox{\hyperlink{_static_array_8h_a637cd4cb57ee325fdc4ec85540a7071f}{DSAG\+\_\+\+ARRAY\+\_\+\+START\+\_\+\+INDEX}}) noexcept
+\item 
+\mbox{\hyperlink{class___static_array___iterator}{\+\_\+\+Static\+Array\+\_\+\+Iterator}} \& \mbox{\hyperlink{class___static_array___iterator_a55b074ca9522bf08486f312361ecc643}{operator++}} () noexcept
+\begin{DoxyCompactList}\small\item\em 정적 배열 반복자의 전위 증가 연산자 오버로딩 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class___static_array___iterator}{\+\_\+\+Static\+Array\+\_\+\+Iterator}} \mbox{\hyperlink{class___static_array___iterator_a285e52abe162f2e3977239c5bda3f0db}{operator++}} (int) noexcept
+\begin{DoxyCompactList}\small\item\em 정적 배열 반복자의 후위 증가 연산자 오버로딩 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class___static_array___iterator}{\+\_\+\+Static\+Array\+\_\+\+Iterator}} \& \mbox{\hyperlink{class___static_array___iterator_ae6c725cc6da67a57ee3f0c7fa56ce4fa}{operator-\/-\/}} () noexcept
+\begin{DoxyCompactList}\small\item\em 정적 배열 반복자의 전위 감소 연산자 오버로딩 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class___static_array___iterator}{\+\_\+\+Static\+Array\+\_\+\+Iterator}} \mbox{\hyperlink{class___static_array___iterator_a0951f229a80f33989ecc849dfc39f50b}{operator-\/-\/}} (int) noexcept
+\begin{DoxyCompactList}\small\item\em 정적 배열 반복자의 후위 감소 연산자 오버로딩 \end{DoxyCompactList}\item 
+constexpr Element\+Type \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class___static_array___iterator_a9f60585aee993553d391b925d5200d2c}{operator-\/$>$}} () const noexcept
+\begin{DoxyCompactList}\small\item\em 정적 배열 반복자의 포인터 멤버 접근 연산자(\+Pointer to Member) 오버로딩 \end{DoxyCompactList}\item 
+\Hypertarget{class___static_array___iterator_a905a16b3c806c5fe233a0fe04c952f69}\label{class___static_array___iterator_a905a16b3c806c5fe233a0fe04c952f69} 
+constexpr bool {\bfseries operator==} (const \mbox{\hyperlink{class___static_array___iterator}{\+\_\+\+Static\+Array\+\_\+\+Iterator}} \&right) const noexcept
+\item 
+\Hypertarget{class___static_array___iterator_a86c9ae51613eabc79cbebca1fc671548}\label{class___static_array___iterator_a86c9ae51613eabc79cbebca1fc671548} 
+constexpr bool {\bfseries operator!=} (const \mbox{\hyperlink{class___static_array___iterator}{\+\_\+\+Static\+Array\+\_\+\+Iterator}} \&right) const noexcept
+\item 
+\Hypertarget{class___static_array___iterator_a05b27e629855a20e5e67157dfa97b85f}\label{class___static_array___iterator_a05b27e629855a20e5e67157dfa97b85f} 
+constexpr bool {\bfseries operator$>$} (const \mbox{\hyperlink{class___static_array___iterator}{\+\_\+\+Static\+Array\+\_\+\+Iterator}} \&right) const noexcept
+\item 
+\Hypertarget{class___static_array___iterator_ad035900880ee8a513a5e438eeb83343a}\label{class___static_array___iterator_ad035900880ee8a513a5e438eeb83343a} 
+constexpr bool {\bfseries operator$<$} (const \mbox{\hyperlink{class___static_array___iterator}{\+\_\+\+Static\+Array\+\_\+\+Iterator}} \&right) const noexcept
+\item 
+\Hypertarget{class___static_array___iterator_afbcd9830ff74e120a3bd235d7e70e267}\label{class___static_array___iterator_afbcd9830ff74e120a3bd235d7e70e267} 
+constexpr Element\+Type \& {\bfseries operator\texorpdfstring{$\ast$}{*}} () const noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, std\+::size\+\_\+t Size$>$\newline
+class \+\_\+\+Static\+Array\+\_\+\+Iterator$<$ T, Size $>$}
+\doxylink{class_static_array}{Static\+Array} 에 대한 반복자 클래스 
+
+Random-\/\+Access Iterator 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class___static_array___iterator_a55b074ca9522bf08486f312361ecc643}\label{class___static_array___iterator_a55b074ca9522bf08486f312361ecc643} 
+\index{\_StaticArray\_Iterator$<$ T, Size $>$@{\_StaticArray\_Iterator$<$ T, Size $>$}!operator++@{operator++}}
+\index{operator++@{operator++}!\_StaticArray\_Iterator$<$ T, Size $>$@{\_StaticArray\_Iterator$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+\mbox{\hyperlink{class___static_array___iterator}{\+\_\+\+Static\+Array\+\_\+\+Iterator}} \& \mbox{\hyperlink{class___static_array___iterator}{\+\_\+\+Static\+Array\+\_\+\+Iterator}}$<$ T, Size $>$\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+정적 배열 반복자의 전위 증가 연산자 오버로딩 
+
+\begin{DoxyReturn}{Returns}
+본인에 대한 l-\/value 참조 
+\end{DoxyReturn}
+\Hypertarget{class___static_array___iterator_a285e52abe162f2e3977239c5bda3f0db}\label{class___static_array___iterator_a285e52abe162f2e3977239c5bda3f0db} 
+\index{\_StaticArray\_Iterator$<$ T, Size $>$@{\_StaticArray\_Iterator$<$ T, Size $>$}!operator++@{operator++}}
+\index{operator++@{operator++}!\_StaticArray\_Iterator$<$ T, Size $>$@{\_StaticArray\_Iterator$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+\mbox{\hyperlink{class___static_array___iterator}{\+\_\+\+Static\+Array\+\_\+\+Iterator}} \mbox{\hyperlink{class___static_array___iterator}{\+\_\+\+Static\+Array\+\_\+\+Iterator}}$<$ T, Size $>$\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+정적 배열 반복자의 후위 증가 연산자 오버로딩 
+
+\begin{DoxyReturn}{Returns}
+후위 증가 연산자에 의해 변경되기 이전 본인에 대한 pr-\/value 사본 
+\end{DoxyReturn}
+\Hypertarget{class___static_array___iterator_ae6c725cc6da67a57ee3f0c7fa56ce4fa}\label{class___static_array___iterator_ae6c725cc6da67a57ee3f0c7fa56ce4fa} 
+\index{\_StaticArray\_Iterator$<$ T, Size $>$@{\_StaticArray\_Iterator$<$ T, Size $>$}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!\_StaticArray\_Iterator$<$ T, Size $>$@{\_StaticArray\_Iterator$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+\mbox{\hyperlink{class___static_array___iterator}{\+\_\+\+Static\+Array\+\_\+\+Iterator}} \& \mbox{\hyperlink{class___static_array___iterator}{\+\_\+\+Static\+Array\+\_\+\+Iterator}}$<$ T, Size $>$\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+정적 배열 반복자의 전위 감소 연산자 오버로딩 
+
+\begin{DoxyReturn}{Returns}
+본인에 대한 l-\/value 참조 
+\end{DoxyReturn}
+\Hypertarget{class___static_array___iterator_a0951f229a80f33989ecc849dfc39f50b}\label{class___static_array___iterator_a0951f229a80f33989ecc849dfc39f50b} 
+\index{\_StaticArray\_Iterator$<$ T, Size $>$@{\_StaticArray\_Iterator$<$ T, Size $>$}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!\_StaticArray\_Iterator$<$ T, Size $>$@{\_StaticArray\_Iterator$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+\mbox{\hyperlink{class___static_array___iterator}{\+\_\+\+Static\+Array\+\_\+\+Iterator}} \mbox{\hyperlink{class___static_array___iterator}{\+\_\+\+Static\+Array\+\_\+\+Iterator}}$<$ T, Size $>$\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+정적 배열 반복자의 후위 감소 연산자 오버로딩 
+
+\begin{DoxyReturn}{Returns}
+후위 감소 연산자에 의해 변경되기 이전 본인에 대한 pr-\/value 사본 
+\end{DoxyReturn}
+\Hypertarget{class___static_array___iterator_a9f60585aee993553d391b925d5200d2c}\label{class___static_array___iterator_a9f60585aee993553d391b925d5200d2c} 
+\index{\_StaticArray\_Iterator$<$ T, Size $>$@{\_StaticArray\_Iterator$<$ T, Size $>$}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!\_StaticArray\_Iterator$<$ T, Size $>$@{\_StaticArray\_Iterator$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+constexpr Element\+Type \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class___static_array___iterator}{\+\_\+\+Static\+Array\+\_\+\+Iterator}}$<$ T, Size $>$\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+정적 배열 반복자의 포인터 멤버 접근 연산자(\+Pointer to Member) 오버로딩 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]제대로 이해하고 다시 주석을 달 필요가 있다. \end{DoxyRefDesc}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+DSAG/\+Includes/\mbox{\hyperlink{_static_array_8h}{Static\+Array.\+h}}\end{DoxyCompactItemize}

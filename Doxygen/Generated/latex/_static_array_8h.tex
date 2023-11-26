@@ -1,0 +1,37 @@
+\doxysection{DSAG/\+Includes/\+Static\+Array.h File Reference}
+\hypertarget{_static_array_8h}{}\label{_static_array_8h}\index{DSAG/Includes/StaticArray.h@{DSAG/Includes/StaticArray.h}}
+{\ttfamily \#include "{}Core\+Definition.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class___static_array___iterator}{\+\_\+\+Static\+Array\+\_\+\+Iterator$<$ T, Size $>$}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_static_array}{Static\+Array} 에 대한 반복자 클래스 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_static_array}{Static\+Array$<$ T, Size $>$}}
+\begin{DoxyCompactList}\small\item\em 고정 크기 배열을 캡슐화하는 컨테이너 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_static_array_8h_a637cd4cb57ee325fdc4ec85540a7071f}\label{_static_array_8h_a637cd4cb57ee325fdc4ec85540a7071f} 
+\#define {\bfseries DSAG\+\_\+\+ARRAY\+\_\+\+START\+\_\+\+INDEX}~0
+\begin{DoxyCompactList}\small\item\em 배열의 시작 인덱스 정의 \end{DoxyCompactList}\item 
+\Hypertarget{_static_array_8h_ad8fce70d12c1a8de6ef5df9cc2c2706f}\label{_static_array_8h_ad8fce70d12c1a8de6ef5df9cc2c2706f} 
+\#define {\bfseries DSAG\+\_\+\+ARRAY\+\_\+\+LAST\+\_\+\+INDEX}~Size -\/ 1
+\begin{DoxyCompactList}\small\item\em 정적 배열의 종료 인덱스 정의 \end{DoxyCompactList}\item 
+\Hypertarget{_static_array_8h_ad677b9334b89e903b11c1800e2fdd6a5}\label{_static_array_8h_ad677b9334b89e903b11c1800e2fdd6a5} 
+\#define {\bfseries DSAG\+\_\+\+ARRAY\+\_\+\+LAST\+\_\+\+RANGE}~Size
+\begin{DoxyCompactList}\small\item\em 정적 배열의 마지막 범위 정의. 정적 배열의 크기와 일치. \end{DoxyCompactList}\item 
+\Hypertarget{_static_array_8h_a822c868ebbe55362b7be944da7f16776}\label{_static_array_8h_a822c868ebbe55362b7be944da7f16776} 
+\#define {\bfseries DSAG\+\_\+\+ARRAY\+\_\+\+STATIC\+\_\+\+ACCESS\+\_\+\+BODY\+\_\+\+INDEX}~return this-\/$>$elements\mbox{[}index\mbox{]};
+\begin{DoxyCompactList}\small\item\em 정적 배열의 인덱스 접근 함수 몸체 \end{DoxyCompactList}\item 
+\Hypertarget{_static_array_8h_aa4a64c5dbb1d04bf2cc39381dd8ff0e5}\label{_static_array_8h_aa4a64c5dbb1d04bf2cc39381dd8ff0e5} 
+\#define {\bfseries DSAG\+\_\+\+ARRAY\+\_\+\+STATIC\+\_\+\+ACCESS\+\_\+\+BODY\+\_\+\+FRONT}~return this-\/$>$elements\mbox{[}0\mbox{]};
+\begin{DoxyCompactList}\small\item\em 정적 배열의 시작 원소 접근 함수 몸체 \end{DoxyCompactList}\item 
+\Hypertarget{_static_array_8h_ad94bf10ce8779bc8ca5ee8226347e660}\label{_static_array_8h_ad94bf10ce8779bc8ca5ee8226347e660} 
+\#define {\bfseries DSAG\+\_\+\+ARRAY\+\_\+\+STATIC\+\_\+\+ACCESS\+\_\+\+BODY\+\_\+\+BACK}~return this-\/$>$elements\mbox{[}Size -\/ 1\mbox{]};
+\begin{DoxyCompactList}\small\item\em 정적 배열의 마지막 원소 접근 함수 몸체 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyDate}{Date}
+2023-\/11-\/25 
+\end{DoxyDate}

@@ -1,0 +1,111 @@
+\doxysection{RUnion\+Find Class Reference}
+\hypertarget{class_r_union_find}{}\label{class_r_union_find}\index{RUnionFind@{RUnionFind}}
+
+
+유니온-\/파인드 연산을 수행해 주는 클래스이다.  
+
+
+
+
+{\ttfamily \#include $<$Union\+Find.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_r_union_find_a450627dd3b9d8d92668ebfaef5fd67d3}{RUnion\+Find}} (Index\+Type n)
+\begin{DoxyCompactList}\small\item\em 인자 만큼의 노드를 가진 유니온-\/파인드 집합을 만든다. 각 노드를 서로 분절된 것으로 초기화한다. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_r_union_find_a620607786cc0b9bbf03cac5f9853edd4}{Nodes\+Have\+Same\+Last\+Parent}} (Index\+Type ni1, Index\+Type ni2) const
+\begin{DoxyCompactList}\small\item\em 두 노드의 인덱스를 받아서, 두 노드가 같은 루트를 공유하는지 검사한다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_union_find_a4dd56bed0ffd9c9b1b9de13470ce5523}{Union\+Nodes}} (Index\+Type ni1, Index\+Type ni2)
+\begin{DoxyCompactList}\small\item\em 두 번째 인자로 전달된 노드의 부모를 첫 번째 노드로 병합한다. \end{DoxyCompactList}\item 
+Index\+Type \mbox{\hyperlink{class_r_union_find_a6d3624f560399b5f7f0226a744ff83b5}{Find\+Last\+Parent\+Node}} (Index\+Type ni) const
+\begin{DoxyCompactList}\small\item\em 인자로 전달된 노드의 최종 부모를 재귀적으로 찾는다. 이 때, 최종 부모는 노드 번호와 부모의 번호가 같은 노드이다. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+유니온-\/파인드 연산을 수행해 주는 클래스이다. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_r_union_find_a450627dd3b9d8d92668ebfaef5fd67d3}\label{class_r_union_find_a450627dd3b9d8d92668ebfaef5fd67d3} 
+\index{RUnionFind@{RUnionFind}!RUnionFind@{RUnionFind}}
+\index{RUnionFind@{RUnionFind}!RUnionFind@{RUnionFind}}
+\doxysubsubsection{\texorpdfstring{RUnionFind()}{RUnionFind()}}
+{\footnotesize\ttfamily RUnion\+Find\+::\+RUnion\+Find (\begin{DoxyParamCaption}\item[{Index\+Type}]{n }\end{DoxyParamCaption})}
+
+
+
+인자 만큼의 노드를 가진 유니온-\/파인드 집합을 만든다. 각 노드를 서로 분절된 것으로 초기화한다. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em n} & 노드의 갯수 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_r_union_find_a6d3624f560399b5f7f0226a744ff83b5}\label{class_r_union_find_a6d3624f560399b5f7f0226a744ff83b5} 
+\index{RUnionFind@{RUnionFind}!FindLastParentNode@{FindLastParentNode}}
+\index{FindLastParentNode@{FindLastParentNode}!RUnionFind@{RUnionFind}}
+\doxysubsubsection{\texorpdfstring{FindLastParentNode()}{FindLastParentNode()}}
+{\footnotesize\ttfamily Index\+Type RUnion\+Find\+::\+Find\+Last\+Parent\+Node (\begin{DoxyParamCaption}\item[{Index\+Type}]{ni }\end{DoxyParamCaption}) const}
+
+
+
+인자로 전달된 노드의 최종 부모를 재귀적으로 찾는다. 이 때, 최종 부모는 노드 번호와 부모의 번호가 같은 노드이다. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ni} & 루트 노드를 찾을 노드의 인덱스 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+루트 노드의 인덱스 
+\end{DoxyReturn}
+언젠가 최종 부모 노드에 도달했다면 노드의 번호와 부모 노드의 번호가 같을 것이다.
+
+다르다면, 자신의 부모 노드로 재귀 호출을 한다.\Hypertarget{class_r_union_find_a620607786cc0b9bbf03cac5f9853edd4}\label{class_r_union_find_a620607786cc0b9bbf03cac5f9853edd4} 
+\index{RUnionFind@{RUnionFind}!NodesHaveSameLastParent@{NodesHaveSameLastParent}}
+\index{NodesHaveSameLastParent@{NodesHaveSameLastParent}!RUnionFind@{RUnionFind}}
+\doxysubsubsection{\texorpdfstring{NodesHaveSameLastParent()}{NodesHaveSameLastParent()}}
+{\footnotesize\ttfamily bool RUnion\+Find\+::\+Nodes\+Have\+Same\+Last\+Parent (\begin{DoxyParamCaption}\item[{Index\+Type}]{ni1,  }\item[{Index\+Type}]{ni2 }\end{DoxyParamCaption}) const}
+
+
+
+두 노드의 인덱스를 받아서, 두 노드가 같은 루트를 공유하는지 검사한다. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ni1} & 첫 번째 노드의 인덱스 \\
+\hline
+\mbox{\texttt{ in}}  & {\em ni2} & 두 번째 노드의 인덱스 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+두 노드가 같은 최종 부모를 공유하는지의 여부 
+\end{DoxyReturn}
+\Hypertarget{class_r_union_find_a4dd56bed0ffd9c9b1b9de13470ce5523}\label{class_r_union_find_a4dd56bed0ffd9c9b1b9de13470ce5523} 
+\index{RUnionFind@{RUnionFind}!UnionNodes@{UnionNodes}}
+\index{UnionNodes@{UnionNodes}!RUnionFind@{RUnionFind}}
+\doxysubsubsection{\texorpdfstring{UnionNodes()}{UnionNodes()}}
+{\footnotesize\ttfamily void RUnion\+Find\+::\+Union\+Nodes (\begin{DoxyParamCaption}\item[{Index\+Type}]{ni1,  }\item[{Index\+Type}]{ni2 }\end{DoxyParamCaption})}
+
+
+
+두 번째 인자로 전달된 노드의 부모를 첫 번째 노드로 병합한다. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ni1} & 첫 번째 노드의 인덱스 \\
+\hline
+\mbox{\texttt{ in}}  & {\em ni2} & 두 번째 노드의 인덱스 \\
+\hline
+\end{DoxyParams}
+두 노드의 최종 부모 노드가 이미 같다면 병합할 필요가 없다.
+
+최종 부모 노드가 다르다면 두 번째 인자로 전달된 노드의 부모를 첫 번째 인자로 전달된 노드의 최종 부모 노드로 설정한다. 이로써 두 노드는 같은 최종 부모를 공유하게 된다.
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+DSAG/\+Includes/\mbox{\hyperlink{_union_find_8h}{Union\+Find.\+h}}\item 
+DSAG/\+Sources/\mbox{\hyperlink{_union_find_8cpp}{Union\+Find.\+cpp}}\end{DoxyCompactItemize}
