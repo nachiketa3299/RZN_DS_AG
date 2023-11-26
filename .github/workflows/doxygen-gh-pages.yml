@@ -16,3 +16,9 @@ jobs:
               run: ls -al
             - name: Generate Doxygen Documentation
               run: doxygen Doxygen/Doxyfile
+            - name: Deploy
+              uses: DenverCoder1/doxygen-github-pages-action@v1
+              with:
+                github_token: ${{ secrets.GITHUB_TOKEN }}
+                branch: gh-pages
+                folder: docs/html
