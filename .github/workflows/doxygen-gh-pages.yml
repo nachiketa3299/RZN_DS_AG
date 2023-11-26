@@ -8,8 +8,9 @@ jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
-            - uses: mattonotmitt/doxygen-action@v1.9.5
-              with:
-                  working-directory: './DSAG/'
-                  doxyfile-path: './Doxygen/Doxyfile'
-                  additional-packages: font-fira-code
+            - name: Checkout Repository
+              uses: actions/checkout@v2
+            - name: Install Doxygen
+              run: sudo apt-get install doxygen
+            - name: Generate Doxygen Documentation
+              run: doxygen Doxyfile
