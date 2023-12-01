@@ -5,13 +5,20 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>RZNDSAG: Member List</title>
+<title>RZN_DS &amp; AG: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,8 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">RZNDSAG
+   <div id="projectname">RZN_DS &amp; AG
    </div>
+   <div id="projectbrief">자료구조와 알고리즘을 구현하는 포트폴리오입니다.</div>
   </td>
  </tr>
  </tbody>
@@ -80,27 +88,27 @@ $(function() {
   <tr class="even"><td class="entry"><a class="el" href="class_static_array.html#af837adcebf87480bc3b3c7e0b4c39700">Back</a>()</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="class_static_array.html#ad85303c3801ed52e9519b37636ea16eb">Back</a>() const</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_static_array.html#a3eda6e455c4a37e9c19c0e8a3667a287">Begin</a>() noexcept</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"><span class="mlabel">related</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>DifferenceType</b> typedef (defined in <a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a>)</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>ElementType</b> typedef (defined in <a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a>)</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_static_array.html#a68ab4cacbe30def955d925d57c9233ff">End</a>() noexcept</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"><span class="mlabel">related</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_static_array.html#ae813a34fcc9c668d91714f1c4b5ae6ac">FillRange</a>(const ElementType &amp;to_fill, SizeType range_start=DSAG_ARRAY_START_INDEX, SizeType range_end=Size)</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_static_array.html#aa9e48970e252c4122c2bb9895cc006c7">Front</a>()</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_static_array.html#abae91424f3d9e93bc691c48ea3f6b831">Front</a>() const</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_static_array.html#af31a1ffafe5932a04ba7452c85cdbbc7">GetPtr</a>() noexcept</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_static_array.html#a64e3d85b3298c1d60c2dfb8f61f2ea0a">GetSize</a>() const noexcept</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>Iterator</b> typedef (defined in <a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a>)</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_static_array.html#ad9faea26cf83fbb0471d46044a6b7c65">ElementType</a> typedef</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_static_array.html#a68ab4cacbe30def955d925d57c9233ff">End</a>() noexcept</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"><span class="mlabel">related</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_static_array.html#ae69454c492d52b7aeaca833e5bdaa7eb">FillRange</a>(const ElementType &amp;to_fill, SizeType range_start_index=DSAG_ARRAY_START_INDEX, SizeType range_last=Size)</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_static_array.html#aa9e48970e252c4122c2bb9895cc006c7">Front</a>()</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_static_array.html#abae91424f3d9e93bc691c48ea3f6b831">Front</a>() const</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_static_array.html#af31a1ffafe5932a04ba7452c85cdbbc7">GetPtr</a>() noexcept</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_static_array.html#a64e3d85b3298c1d60c2dfb8f61f2ea0a">GetSize</a>() const noexcept</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_static_array.html#a1932eb3444437a651f0bce85bc23b85b">IsValidIndex</a>(SizeType index)</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_static_array.html#a3b32b885b333e6bc64d37a60bf3e6751">Iterator</a> typedef</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_static_array.html#ad8b332b6a9d8cea23c0013745cd0defb">operator=</a>(const StaticArray &amp;right)</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="class_static_array.html#afbad5ff940975a89a3fb6500a8ee9a30">operator=</a>(const StaticArray &amp;&amp;to_move)</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_static_array.html#a45c6766f633b6983144e74b08cae23d8">operator[]</a>(SizeType index)</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="class_static_array.html#a01ed578ae36779c3a70fba79004b0588">operator[]</a>(SizeType index) const</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>ReverseIterator</b> typedef (defined in <a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a>)</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>SizeType</b> typedef (defined in <a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a>)</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_static_array.html#ae982d179e6be526d4d87417b27496a68">ReverseIterator</a> typedef</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_static_array.html#ae19717695f3d3d41ea27e91c4b6e1419">SizeType</a> typedef</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_static_array.html#a055353f7cfbfe114aeab162941d0f64b">StaticArray</a>()=default</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="class_static_array.html#a4f8a6f63d1957478082d87e9bd0a6a05">StaticArray</a>(const StaticArray &amp;right)</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_static_array.html#a01788362dfb47c5bb3b1bd62dd0d11f2">StaticArray</a>(const StaticArray &amp;&amp;to_move) noexcept</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>StaticArray</b>(const T &amp;to_fill) (defined in <a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a>)</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_static_array.html#a442a5ea4e204474e712981be166f133a">StaticArray</a>(const T &amp;to_fill)</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_static_array.html#aaffa96c04ba99bfa22c470ba03774c69">Swap</a>(StaticArray &amp;other) noexcept</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>~StaticArray</b>()=default (defined in <a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a>)</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_static_array.html#ae49d3c6f392e81834073c5f40b89d51e">~StaticArray</a>()=default</td><td class="entry"><a class="el" href="class_static_array.html">StaticArray&lt; T, Size &gt;</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

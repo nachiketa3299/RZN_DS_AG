@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['staticarray_0',['staticarray',['../class_static_array.html',1,'StaticArray&lt; T, Size &gt;'],['../class_static_array.html#a055353f7cfbfe114aeab162941d0f64b',1,'StaticArray::StaticArray()=default'],['../class_static_array.html#a4f8a6f63d1957478082d87e9bd0a6a05',1,'StaticArray::StaticArray(const StaticArray &amp;right)'],['../class_static_array.html#a01788362dfb47c5bb3b1bd62dd0d11f2',1,'StaticArray::StaticArray(const StaticArray &amp;&amp;to_move) noexcept']]],
-  ['staticarray_2eh_1',['StaticArray.h',['../_static_array_8h.html',1,'']]],
-  ['swap_2',['Swap',['../class_static_array.html#aaffa96c04ba99bfa22c470ba03774c69',1,'StaticArray']]]
+  ['reverseiterator_0',['ReverseIterator',['../class_static_array.html#ae982d179e6be526d4d87417b27496a68',1,'StaticArray']]],
+  ['rgraph_1',['rgraph',['../class_r_graph.html',1,'RGraph'],['../class_r_graph.html#a1a2bac6f6e5d5b4fc813860fbbd777a7',1,'RGraph::RGraph()']]],
+  ['runionfind_2',['runionfind',['../class_r_union_find.html',1,'RUnionFind'],['../class_r_union_find.html#a450627dd3b9d8d92668ebfaef5fd67d3',1,'RUnionFind::RUnionFind()']]]
 ];

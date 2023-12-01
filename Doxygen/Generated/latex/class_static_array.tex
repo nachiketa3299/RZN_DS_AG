@@ -2,7 +2,7 @@
 \hypertarget{class_static_array}{}\label{class_static_array}\index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
 
 
-고정 크기 배열을 캡슐화하는 컨테이너  
+정적 배열(고정 크기 배열, Static Array)을 캡슐화하는 컨테이너입니다.  
 
 
 
@@ -12,21 +12,14 @@
 \doxysubsubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_static_array_ad9faea26cf83fbb0471d46044a6b7c65}\label{class_static_array_ad9faea26cf83fbb0471d46044a6b7c65} 
-using {\bfseries Element\+Type} = T
-\item 
-\Hypertarget{class_static_array_ae19717695f3d3d41ea27e91c4b6e1419}\label{class_static_array_ae19717695f3d3d41ea27e91c4b6e1419} 
-using {\bfseries Size\+Type} = std\+::size\+\_\+t
-\item 
-\Hypertarget{class_static_array_a3b32b885b333e6bc64d37a60bf3e6751}\label{class_static_array_a3b32b885b333e6bc64d37a60bf3e6751} 
-using {\bfseries Iterator} = \mbox{\hyperlink{class___static_array___iterator}{\+\_\+\+Static\+Array\+\_\+\+Iterator}}$<$ T, Size $>$
-\item 
-\Hypertarget{class_static_array_ae982d179e6be526d4d87417b27496a68}\label{class_static_array_ae982d179e6be526d4d87417b27496a68} 
-using {\bfseries Reverse\+Iterator} = int
-\item 
-\Hypertarget{class_static_array_a8f420dbbe3820243aa1e770ef23f1af3}\label{class_static_array_a8f420dbbe3820243aa1e770ef23f1af3} 
-using {\bfseries Difference\+Type} = std\+::ptrdiff\+\_\+t
-\end{DoxyCompactItemize}
+using \mbox{\hyperlink{class_static_array_ad9faea26cf83fbb0471d46044a6b7c65}{Element\+Type}} = T
+\begin{DoxyCompactList}\small\item\em 정적 배열의 각 요소의 자료형입니다. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{class_static_array_ae19717695f3d3d41ea27e91c4b6e1419}{Size\+Type}} = std\+::size\+\_\+t
+\begin{DoxyCompactList}\small\item\em 정적 배열의 크기(요소의 갯수)입니다. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{class_static_array_a3b32b885b333e6bc64d37a60bf3e6751}{Iterator}} = \mbox{\hyperlink{class___static_array___iterator}{\+\_\+\+Static\+Array\+\_\+\+Iterator}}$<$ T, Size $>$
+\begin{DoxyCompactList}\small\item\em 정적 배열의 정방향 순회 방법을 제공하는 반복자입니다. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{class_static_array_ae982d179e6be526d4d87417b27496a68}{Reverse\+Iterator}} = int
+\begin{DoxyCompactList}\small\item\em 정적 배열의 역방향 순회 방법을 제공하는 반복자입니다. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -41,52 +34,134 @@ using {\bfseries Difference\+Type} = std\+::ptrdiff\+\_\+t
 \begin{DoxyCompactList}\small\item\em Move-\/\+Constructible. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_static_array}{Static\+Array}} \& \mbox{\hyperlink{class_static_array_afbad5ff940975a89a3fb6500a8ee9a30}{operator=}} (const \mbox{\hyperlink{class_static_array}{Static\+Array}} \&\&to\+\_\+move)
 \begin{DoxyCompactList}\small\item\em Move-\/\+Assignable. \end{DoxyCompactList}\item 
-\Hypertarget{class_static_array_a442a5ea4e204474e712981be166f133a}\label{class_static_array_a442a5ea4e204474e712981be166f133a} 
-{\bfseries Static\+Array} (const T \&to\+\_\+fill)
-\item 
-constexpr Element\+Type \& \mbox{\hyperlink{class_static_array_a45c6766f633b6983144e74b08cae23d8}{operator\mbox{[}$\,$\mbox{]}}} (Size\+Type index)
-\begin{DoxyCompactList}\small\item\em {\ttfamily index} 로 지정된 위치의 요소에 대한 참조를 반환한다. \end{DoxyCompactList}\item 
-constexpr const Element\+Type \& \mbox{\hyperlink{class_static_array_a01ed578ae36779c3a70fba79004b0588}{operator\mbox{[}$\,$\mbox{]}}} (Size\+Type index) const
-\begin{DoxyCompactList}\small\item\em {\ttfamily index} 로 지정된 위치의 요소에 대한 상수 참조를 반환한다. \end{DoxyCompactList}\item 
-constexpr Element\+Type \& \mbox{\hyperlink{class_static_array_ac8004068309188762a2eff4a8b3222d8}{At}} (Size\+Type index)
-\begin{DoxyCompactList}\small\item\em {\ttfamily index} 로 지정된 위치의 요소에 대한 참조를 반환한다. \end{DoxyCompactList}\item 
-constexpr const Element\+Type \& \mbox{\hyperlink{class_static_array_ab7095adf7625cf754024b64738f8bcdc}{At}} (Size\+Type index) const
-\begin{DoxyCompactList}\small\item\em {\ttfamily index} 로 지정된 위치의 요소에 대한 상수 참조를 반환한다. \end{DoxyCompactList}\item 
-constexpr Element\+Type \& \mbox{\hyperlink{class_static_array_aa9e48970e252c4122c2bb9895cc006c7}{Front}} ()
-\begin{DoxyCompactList}\small\item\em 컨테이너의 첫 번째 요소에 대한 참조를 반환한다. \end{DoxyCompactList}\item 
-constexpr const Element\+Type \& \mbox{\hyperlink{class_static_array_abae91424f3d9e93bc691c48ea3f6b831}{Front}} () const
-\begin{DoxyCompactList}\small\item\em 컨테이너의 첫 번째 요소에 대한 상수 참조를 반환한다. \end{DoxyCompactList}\item 
-constexpr Element\+Type \& \mbox{\hyperlink{class_static_array_af837adcebf87480bc3b3c7e0b4c39700}{Back}} ()
-\begin{DoxyCompactList}\small\item\em 컨테이너의 마지막 요소에 대한 참조를 반환한다. \end{DoxyCompactList}\item 
-constexpr const Element\+Type \& \mbox{\hyperlink{class_static_array_ad85303c3801ed52e9519b37636ea16eb}{Back}} () const
-\begin{DoxyCompactList}\small\item\em 컨테이너의 마지막 원소에 대한 상수 참조를 반환한다. \end{DoxyCompactList}\item 
-constexpr void \mbox{\hyperlink{class_static_array_ae813a34fcc9c668d91714f1c4b5ae6ac}{Fill\+Range}} (const Element\+Type \&to\+\_\+fill, Size\+Type range\+\_\+start=\mbox{\hyperlink{_static_array_8h_a637cd4cb57ee325fdc4ec85540a7071f}{DSAG\+\_\+\+ARRAY\+\_\+\+START\+\_\+\+INDEX}}, Size\+Type range\+\_\+end=Size)
-\begin{DoxyCompactList}\small\item\em {\ttfamily range\+\_\+start} 이상 {\ttfamily range\+\_\+end} 미만의 원소를 {\ttfamily to\+\_\+fill} 로 채운다. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_static_array_ae49d3c6f392e81834073c5f40b89d51e}{\texorpdfstring{$\sim$}{\string~}\+Static\+Array}} ()=default
+\begin{DoxyCompactList}\small\item\em 정적 배열의 소멸자(\+Destructor)입니다. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_static_array_a442a5ea4e204474e712981be166f133a}{Static\+Array}} (const T \&to\+\_\+fill)
+\begin{DoxyCompactList}\small\item\em 정적 배열을 선언과 동시에 모든 요소를 {\ttfamily to\+\_\+fill} 값으로 설정합니다. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_static_array_ad9faea26cf83fbb0471d46044a6b7c65}{Element\+Type}} \& \mbox{\hyperlink{class_static_array_a45c6766f633b6983144e74b08cae23d8}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{class_static_array_ae19717695f3d3d41ea27e91c4b6e1419}{Size\+Type}} index)
+\begin{DoxyCompactList}\small\item\em 정적 배열의 {\ttfamily index} 로 지정된 위치의 요소에 대한 참조(l-\/value)를 반환합니다.   \end{DoxyCompactList}\item 
+constexpr const \mbox{\hyperlink{class_static_array_ad9faea26cf83fbb0471d46044a6b7c65}{Element\+Type}} \& \mbox{\hyperlink{class_static_array_a01ed578ae36779c3a70fba79004b0588}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{class_static_array_ae19717695f3d3d41ea27e91c4b6e1419}{Size\+Type}} index) const
+\begin{DoxyCompactList}\small\item\em 정적 배열의 {\ttfamily index} 로 지정된 위치의 요소에 대한 상수 참조(l-\/value)를 반환합니다.   \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_static_array_ad9faea26cf83fbb0471d46044a6b7c65}{Element\+Type}} \& \mbox{\hyperlink{class_static_array_ac8004068309188762a2eff4a8b3222d8}{At}} (\mbox{\hyperlink{class_static_array_ae19717695f3d3d41ea27e91c4b6e1419}{Size\+Type}} index)
+\begin{DoxyCompactList}\small\item\em 정적 배열의 {\ttfamily index} 로 지정된 위치의 요소에 대한 참조(l-\/value)를 반환합니다. \end{DoxyCompactList}\item 
+constexpr const \mbox{\hyperlink{class_static_array_ad9faea26cf83fbb0471d46044a6b7c65}{Element\+Type}} \& \mbox{\hyperlink{class_static_array_ab7095adf7625cf754024b64738f8bcdc}{At}} (\mbox{\hyperlink{class_static_array_ae19717695f3d3d41ea27e91c4b6e1419}{Size\+Type}} index) const
+\begin{DoxyCompactList}\small\item\em 정적 배열의 {\ttfamily index} 로 지정된 위치의 요소에 대한 상수 참조(l-\/value)를 반환합니다. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_static_array_ad9faea26cf83fbb0471d46044a6b7c65}{Element\+Type}} \& \mbox{\hyperlink{class_static_array_aa9e48970e252c4122c2bb9895cc006c7}{Front}} ()
+\begin{DoxyCompactList}\small\item\em 정적 배열의 첫 번째 요소에 대한 참조(l-\/value)를 반환합니다. \end{DoxyCompactList}\item 
+constexpr const \mbox{\hyperlink{class_static_array_ad9faea26cf83fbb0471d46044a6b7c65}{Element\+Type}} \& \mbox{\hyperlink{class_static_array_abae91424f3d9e93bc691c48ea3f6b831}{Front}} () const
+\begin{DoxyCompactList}\small\item\em 정적 배열의 첫 번째 요소에 대한 상수 참조(l-\/value)를 반환합니다. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_static_array_ad9faea26cf83fbb0471d46044a6b7c65}{Element\+Type}} \& \mbox{\hyperlink{class_static_array_af837adcebf87480bc3b3c7e0b4c39700}{Back}} ()
+\begin{DoxyCompactList}\small\item\em 정적 배열의 마지막 요소에 대한 참조(l-\/value)를 반환합니다. \end{DoxyCompactList}\item 
+constexpr const \mbox{\hyperlink{class_static_array_ad9faea26cf83fbb0471d46044a6b7c65}{Element\+Type}} \& \mbox{\hyperlink{class_static_array_ad85303c3801ed52e9519b37636ea16eb}{Back}} () const
+\begin{DoxyCompactList}\small\item\em 정적 배열의 마지막 요소에 대한 상수 참조(l-\/value)를 반환합니다. \end{DoxyCompactList}\item 
+constexpr void \mbox{\hyperlink{class_static_array_ae69454c492d52b7aeaca833e5bdaa7eb}{Fill\+Range}} (const \mbox{\hyperlink{class_static_array_ad9faea26cf83fbb0471d46044a6b7c65}{Element\+Type}} \&to\+\_\+fill, \mbox{\hyperlink{class_static_array_ae19717695f3d3d41ea27e91c4b6e1419}{Size\+Type}} range\+\_\+start\+\_\+index=\mbox{\hyperlink{_static_array_8h_a637cd4cb57ee325fdc4ec85540a7071f}{DSAG\+\_\+\+ARRAY\+\_\+\+START\+\_\+\+INDEX}}, \mbox{\hyperlink{class_static_array_ae19717695f3d3d41ea27e91c4b6e1419}{Size\+Type}} range\+\_\+last=Size)
+\begin{DoxyCompactList}\small\item\em 정적 배열의 {\ttfamily range\+\_\+start\+\_\+index} 이상 {\ttfamily range\+\_\+last} 미만의 요소를 값 {\ttfamily to\+\_\+fill} 로 채웁니다(\+Fill). \end{DoxyCompactList}\item 
 constexpr void \mbox{\hyperlink{class_static_array_aaffa96c04ba99bfa22c470ba03774c69}{Swap}} (\mbox{\hyperlink{class_static_array}{Static\+Array}} \&other) noexcept
-\begin{DoxyCompactList}\small\item\em 현재 컨테이너의 내용을 {\ttfamily other} 컨테이너의 내용과 교체한다. \end{DoxyCompactList}\item 
-constexpr Element\+Type \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_static_array_af31a1ffafe5932a04ba7452c85cdbbc7}{Get\+Ptr}} () noexcept
-\begin{DoxyCompactList}\small\item\em 현재 컨테이너의 첫 번째 원소 주소를 반환한다. \end{DoxyCompactList}\item 
-constexpr Size\+Type \mbox{\hyperlink{class_static_array_a64e3d85b3298c1d60c2dfb8f61f2ea0a}{Get\+Size}} () const noexcept
-\begin{DoxyCompactList}\small\item\em 현재 컨테이너의 크기를 반환한다. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 현재 정적 배열의 내용을 다른 정적 배열의 내용({\ttfamily other} )과 교체(\+Swap)합니다. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_static_array_ad9faea26cf83fbb0471d46044a6b7c65}{Element\+Type}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_static_array_af31a1ffafe5932a04ba7452c85cdbbc7}{Get\+Ptr}} () noexcept
+\begin{DoxyCompactList}\small\item\em 정적 배열의 첫 번째 요소에 대한 포인터를 반환합니다. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_static_array_ae19717695f3d3d41ea27e91c4b6e1419}{Size\+Type}} \mbox{\hyperlink{class_static_array_a64e3d85b3298c1d60c2dfb8f61f2ea0a}{Get\+Size}} () const noexcept
+\begin{DoxyCompactList}\small\item\em 정적 배열의 크기를 반환합니다. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr bool \mbox{\hyperlink{class_static_array_a1932eb3444437a651f0bce85bc23b85b}{Is\+Valid\+Index}} (\mbox{\hyperlink{class_static_array_ae19717695f3d3d41ea27e91c4b6e1419}{Size\+Type}} index)
+\begin{DoxyCompactList}\small\item\em {\ttfamily index} 를 받아, 유효한 인덱스인지 검사합니다. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Related Symbols}
 (Note that these are not member symbols.) \begin{DoxyCompactItemize}
 \item 
-constexpr \mbox{\hyperlink{class___static_array___iterator}{Iterator}} \mbox{\hyperlink{class_static_array_a3eda6e455c4a37e9c19c0e8a3667a287}{Begin}} () noexcept
+constexpr \mbox{\hyperlink{class_static_array_a3b32b885b333e6bc64d37a60bf3e6751}{Iterator}} \mbox{\hyperlink{class_static_array_a3eda6e455c4a37e9c19c0e8a3667a287}{Begin}} () noexcept
 \begin{DoxyCompactList}\small\item\em 현재 컨테이너의 시작 반복자를 반환 \end{DoxyCompactList}\item 
-constexpr \mbox{\hyperlink{class___static_array___iterator}{Iterator}} \mbox{\hyperlink{class_static_array_a68ab4cacbe30def955d925d57c9233ff}{End}} () noexcept
+constexpr \mbox{\hyperlink{class_static_array_a3b32b885b333e6bc64d37a60bf3e6751}{Iterator}} \mbox{\hyperlink{class_static_array_a68ab4cacbe30def955d925d57c9233ff}{End}} () noexcept
 \begin{DoxyCompactList}\small\item\em 현재 컨테이너의 끝 반복자를 반환 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 \subsubsection*{template$<$typename T, std\+::size\+\_\+t Size$>$\newline
 class Static\+Array$<$ T, Size $>$}
-고정 크기 배열을 캡슐화하는 컨테이너 
+정적 배열(고정 크기 배열, Static Array)을 캡슐화하는 컨테이너입니다. 
+
+요소의 개수가 {\ttfamily Size} 개인 {\ttfamily T} 형 배열을 래핑합니다. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & 정적 배열의 각 요소의 자료형입니다. \\
+\hline
+{\em Size} & 정적 배열의 크기(요소의 갯수)입니다. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyDate}{Date}
+2023-\/12-\/01 
+\end{DoxyDate}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{class_static_array_ad9faea26cf83fbb0471d46044a6b7c65}\label{class_static_array_ad9faea26cf83fbb0471d46044a6b7c65} 
+\index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!ElementType@{ElementType}}
+\index{ElementType@{ElementType}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{ElementType}{ElementType}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+using \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+Element\+Type =  T}
+
+
+
+정적 배열의 각 요소의 자료형입니다. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/01 
+\end{DoxyDate}
+\Hypertarget{class_static_array_a3b32b885b333e6bc64d37a60bf3e6751}\label{class_static_array_a3b32b885b333e6bc64d37a60bf3e6751} 
+\index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{Iterator}{Iterator}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+using \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+Iterator =  \mbox{\hyperlink{class___static_array___iterator}{\+\_\+\+Static\+Array\+\_\+\+Iterator}}$<$T, Size$>$}
+
+
+
+정적 배열의 정방향 순회 방법을 제공하는 반복자입니다. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class___static_array___iterator}{\+\_\+\+Static\+Array\+\_\+\+Iterator} 
+\end{DoxySeeAlso}
+\begin{DoxyDate}{Date}
+2023-\/12-\/01 
+\end{DoxyDate}
+\Hypertarget{class_static_array_ae982d179e6be526d4d87417b27496a68}\label{class_static_array_ae982d179e6be526d4d87417b27496a68} 
+\index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!ReverseIterator@{ReverseIterator}}
+\index{ReverseIterator@{ReverseIterator}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{ReverseIterator}{ReverseIterator}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+using \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+Reverse\+Iterator =  int}
+
+
+
+정적 배열의 역방향 순회 방법을 제공하는 반복자입니다. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000002}{Todo}}]구현되어 있지 않습니다. \end{DoxyRefDesc}
+\begin{DoxyDate}{Date}
+2023-\/12-\/01 
+\end{DoxyDate}
+\Hypertarget{class_static_array_ae19717695f3d3d41ea27e91c4b6e1419}\label{class_static_array_ae19717695f3d3d41ea27e91c4b6e1419} 
+\index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!SizeType@{SizeType}}
+\index{SizeType@{SizeType}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{SizeType}{SizeType}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+using \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+Size\+Type =  std\+::size\+\_\+t}
+
+
+
+정적 배열의 크기(요소의 갯수)입니다. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/01 
+\end{DoxyDate}
+
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_static_array_a4f8a6f63d1957478082d87e9bd0a6a05}\label{class_static_array_a4f8a6f63d1957478082d87e9bd0a6a05} 
 \index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!StaticArray@{StaticArray}}
 \index{StaticArray@{StaticArray}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
-\doxysubsubsection{\texorpdfstring{StaticArray()}{StaticArray()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{StaticArray()}{StaticArray()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
 \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\mbox{\hyperlink{class_static_array}{\+::\+Static\+Array}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$ \&}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -102,7 +177,7 @@ Copy-\/\+Constructible.
 \Hypertarget{class_static_array_a01788362dfb47c5bb3b1bd62dd0d11f2}\label{class_static_array_a01788362dfb47c5bb3b1bd62dd0d11f2} 
 \index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!StaticArray@{StaticArray}}
 \index{StaticArray@{StaticArray}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
-\doxysubsubsection{\texorpdfstring{StaticArray()}{StaticArray()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{StaticArray()}{StaticArray()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
 {\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
 \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\mbox{\hyperlink{class_static_array}{\+::\+Static\+Array}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$ \&\&}]{to\+\_\+move }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
@@ -115,6 +190,39 @@ Move-\/\+Constructible.
 {\em to\+\_\+move} & \\
 \hline
 \end{DoxyParams}
+\Hypertarget{class_static_array_ae49d3c6f392e81834073c5f40b89d51e}\label{class_static_array_ae49d3c6f392e81834073c5f40b89d51e} 
+\index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!````~StaticArray@{\texorpdfstring{$\sim$}{\string~}StaticArray}}
+\index{````~StaticArray@{\texorpdfstring{$\sim$}{\string~}StaticArray}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}StaticArray()}{\string~StaticArray()}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+\mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{class_static_array}{Static\+Array}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+정적 배열의 소멸자(\+Destructor)입니다. 
+
+\begin{DoxyDate}{Date}
+2023-\/12-\/01 
+\end{DoxyDate}
+\Hypertarget{class_static_array_a442a5ea4e204474e712981be166f133a}\label{class_static_array_a442a5ea4e204474e712981be166f133a} 
+\index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!StaticArray@{StaticArray}}
+\index{StaticArray@{StaticArray}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{StaticArray()}{StaticArray()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+\mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\mbox{\hyperlink{class_static_array}{\+::\+Static\+Array}} (\begin{DoxyParamCaption}\item[{const T \&}]{to\+\_\+fill }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+정적 배열을 선언과 동시에 모든 요소를 {\ttfamily to\+\_\+fill} 값으로 설정합니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em to\+\_\+fill} & 정적 배열의 모든 요소가 이 값으로 초기화 됩니다. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+2023-\/12-\/01 
+\end{DoxyDate}
 
 
 \doxysubsection{Member Function Documentation}
@@ -123,145 +231,205 @@ Move-\/\+Constructible.
 \index{At@{At}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
 \doxysubsubsection{\texorpdfstring{At()}{At()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
-constexpr Element\+Type \& \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+At (\begin{DoxyParamCaption}\item[{Size\+Type}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+constexpr \mbox{\hyperlink{class_static_array_ad9faea26cf83fbb0471d46044a6b7c65}{Element\+Type}} \& \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+At (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_static_array_ae19717695f3d3d41ea27e91c4b6e1419}{Size\+Type}}}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
 
 
 
-{\ttfamily index} 로 지정된 위치의 요소에 대한 참조를 반환한다. 
+정적 배열의 {\ttfamily index} 로 지정된 위치의 요소에 대한 참조(l-\/value)를 반환합니다. 
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em index} & 접근할 요소의 인덱스 값 \\
+\mbox{\texttt{ in}}  & {\em index} & 접근할 요소의 인덱스 값입니다. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily index} 로 지정된 위치의 요소에 대한 참조(l-\/value) 입니다. 
+\end{DoxyReturn}
 \begin{DoxyNote}{Note}
-유효한 {\ttfamily index} 범위를 검사한다. ~\newline
- 
+{\ttfamily index} 의 유효성을 검사합니다. 
 \end{DoxyNote}
+\begin{DoxyDate}{Date}
+2023-\/12-\/01 
+\end{DoxyDate}
 \Hypertarget{class_static_array_ab7095adf7625cf754024b64738f8bcdc}\label{class_static_array_ab7095adf7625cf754024b64738f8bcdc} 
 \index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!At@{At}}
 \index{At@{At}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
 \doxysubsubsection{\texorpdfstring{At()}{At()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
-constexpr const Element\+Type \& \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+At (\begin{DoxyParamCaption}\item[{Size\+Type}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+constexpr const \mbox{\hyperlink{class_static_array_ad9faea26cf83fbb0471d46044a6b7c65}{Element\+Type}} \& \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+At (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_static_array_ae19717695f3d3d41ea27e91c4b6e1419}{Size\+Type}}}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
 
 
 
-{\ttfamily index} 로 지정된 위치의 요소에 대한 상수 참조를 반환한다. 
+정적 배열의 {\ttfamily index} 로 지정된 위치의 요소에 대한 상수 참조(l-\/value)를 반환합니다. 
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em index} & 접근할 요소의 인덱스 값 \\
+\mbox{\texttt{ in}}  & {\em index} & 접근할 요소의 인덱스 값입니다. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily index} 로 지정된 위치의 요소에 대한 상수 참조(l-\/value) 입니다. 
+\end{DoxyReturn}
 \begin{DoxyNote}{Note}
-유효한 {\ttfamily index} 범위를 검사한다. ~\newline
- 
+{\ttfamily index} 의 유효성을 검사합니다. 
 \end{DoxyNote}
+\begin{DoxyDate}{Date}
+2023-\/12-\/01 
+\end{DoxyDate}
 \Hypertarget{class_static_array_af837adcebf87480bc3b3c7e0b4c39700}\label{class_static_array_af837adcebf87480bc3b3c7e0b4c39700} 
 \index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!Back@{Back}}
 \index{Back@{Back}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
 \doxysubsubsection{\texorpdfstring{Back()}{Back()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
-constexpr Element\+Type \& \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+Back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+constexpr \mbox{\hyperlink{class_static_array_ad9faea26cf83fbb0471d46044a6b7c65}{Element\+Type}} \& \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+Back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
 
 
 
-컨테이너의 마지막 요소에 대한 참조를 반환한다. 
+정적 배열의 마지막 요소에 대한 참조(l-\/value)를 반환합니다. 
 
 \begin{DoxyReturn}{Returns}
-컨테이너의 마지막 원소에 대한 l-\/value 참조 
+마지막 요소에 대한 참조(l-\/value)입니다. 
 \end{DoxyReturn}
+\begin{DoxyDate}{Date}
+2023-\/12-\/01 
+\end{DoxyDate}
 \Hypertarget{class_static_array_ad85303c3801ed52e9519b37636ea16eb}\label{class_static_array_ad85303c3801ed52e9519b37636ea16eb} 
 \index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!Back@{Back}}
 \index{Back@{Back}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
 \doxysubsubsection{\texorpdfstring{Back()}{Back()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
-constexpr const Element\+Type \& \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+Back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+constexpr const \mbox{\hyperlink{class_static_array_ad9faea26cf83fbb0471d46044a6b7c65}{Element\+Type}} \& \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+Back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
 
 
 
-컨테이너의 마지막 원소에 대한 상수 참조를 반환한다. 
+정적 배열의 마지막 요소에 대한 상수 참조(l-\/value)를 반환합니다. 
 
 \begin{DoxyReturn}{Returns}
-컨테이너의 마지막 원소에 대한 l-\/value 상수 참조 
+마지막 요소에 대한 상수 참조(l-\/value)입니다. 
 \end{DoxyReturn}
-\Hypertarget{class_static_array_ae813a34fcc9c668d91714f1c4b5ae6ac}\label{class_static_array_ae813a34fcc9c668d91714f1c4b5ae6ac} 
+\begin{DoxyDate}{Date}
+2023-\/12-\/01 
+\end{DoxyDate}
+\Hypertarget{class_static_array_ae69454c492d52b7aeaca833e5bdaa7eb}\label{class_static_array_ae69454c492d52b7aeaca833e5bdaa7eb} 
 \index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!FillRange@{FillRange}}
 \index{FillRange@{FillRange}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
 \doxysubsubsection{\texorpdfstring{FillRange()}{FillRange()}}
 {\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
-constexpr void \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+Fill\+Range (\begin{DoxyParamCaption}\item[{const Element\+Type \&}]{to\+\_\+fill,  }\item[{Size\+Type}]{range\+\_\+start = {\ttfamily \mbox{\hyperlink{_static_array_8h_a637cd4cb57ee325fdc4ec85540a7071f}{DSAG\+\_\+\+ARRAY\+\_\+\+START\+\_\+\+INDEX}}},  }\item[{Size\+Type}]{range\+\_\+end = {\ttfamily Size} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+constexpr void \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+Fill\+Range (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_static_array_ad9faea26cf83fbb0471d46044a6b7c65}{Element\+Type}} \&}]{to\+\_\+fill,  }\item[{\mbox{\hyperlink{class_static_array_ae19717695f3d3d41ea27e91c4b6e1419}{Size\+Type}}}]{range\+\_\+start\+\_\+index = {\ttfamily \mbox{\hyperlink{_static_array_8h_a637cd4cb57ee325fdc4ec85540a7071f}{DSAG\+\_\+\+ARRAY\+\_\+\+START\+\_\+\+INDEX}}},  }\item[{\mbox{\hyperlink{class_static_array_ae19717695f3d3d41ea27e91c4b6e1419}{Size\+Type}}}]{range\+\_\+last = {\ttfamily Size} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
 
 
 
-{\ttfamily range\+\_\+start} 이상 {\ttfamily range\+\_\+end} 미만의 원소를 {\ttfamily to\+\_\+fill} 로 채운다. 
+정적 배열의 {\ttfamily range\+\_\+start\+\_\+index} 이상 {\ttfamily range\+\_\+last} 미만의 요소를 값 {\ttfamily to\+\_\+fill} 로 채웁니다(\+Fill). 
 
-
+{\ttfamily range\+\_\+start\+\_\+index} 와 {\ttfamily range\+\_\+last} 는 다음을 만족해야 합니다\+:  
+0 \leq \verb|range_start_index| < \verb|range_last| \leq \verb|Size|
+ 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em to\+\_\+fill} & 채울 값 \\
+\mbox{\texttt{ in}}  & {\em to\+\_\+fill} & 설정할 값 입니다. \\
 \hline
-\mbox{\texttt{ in}}  & {\em range\+\_\+start} & 채울 범위의 시작 인덱스 \\
+\mbox{\texttt{ in}}  & {\em range\+\_\+start\+\_\+index} & (Optional) 채울 범위의 시작 인덱스 입니다. 기본 값은 \doxylink{_static_array_8h_a637cd4cb57ee325fdc4ec85540a7071f}{DSAG\+\_\+\+ARRAY\+\_\+\+START\+\_\+\+INDEX} 입니다. \\
 \hline
-\mbox{\texttt{ in}}  & {\em range\+\_\+end} & 채울 범위의 마지막 인덱스 + 1 \\
+\mbox{\texttt{ in}}  & {\em range\+\_\+last} & (Optional) 채울 범위의 끝 입니다. 채울 범위의 마지막 인덱스에 1을 더한 값입니다. 기본 값은 {\ttfamily Size} 입니다. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000003}{Todo}}]반복자 버전의 오버로딩이 필요하다. \end{DoxyRefDesc}
+\begin{DoxyDate}{Date}
+2023-\/12-\/01 
+\end{DoxyDate}
 \Hypertarget{class_static_array_aa9e48970e252c4122c2bb9895cc006c7}\label{class_static_array_aa9e48970e252c4122c2bb9895cc006c7} 
 \index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!Front@{Front}}
 \index{Front@{Front}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
 \doxysubsubsection{\texorpdfstring{Front()}{Front()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
-constexpr Element\+Type \& \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+Front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+constexpr \mbox{\hyperlink{class_static_array_ad9faea26cf83fbb0471d46044a6b7c65}{Element\+Type}} \& \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+Front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
 
 
 
-컨테이너의 첫 번째 요소에 대한 참조를 반환한다. 
+정적 배열의 첫 번째 요소에 대한 참조(l-\/value)를 반환합니다. 
 
 \begin{DoxyReturn}{Returns}
-컨테이너의 첫 번째 원소에 대한 l-\/value 참조 
+첫 번째 요소에 대한 참조(l-\/value)입니다. 
 \end{DoxyReturn}
+\begin{DoxyDate}{Date}
+2023-\/12-\/01 
+\end{DoxyDate}
 \Hypertarget{class_static_array_abae91424f3d9e93bc691c48ea3f6b831}\label{class_static_array_abae91424f3d9e93bc691c48ea3f6b831} 
 \index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!Front@{Front}}
 \index{Front@{Front}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
 \doxysubsubsection{\texorpdfstring{Front()}{Front()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
-constexpr const Element\+Type \& \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+Front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+constexpr const \mbox{\hyperlink{class_static_array_ad9faea26cf83fbb0471d46044a6b7c65}{Element\+Type}} \& \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+Front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
 
 
 
-컨테이너의 첫 번째 요소에 대한 상수 참조를 반환한다. 
+정적 배열의 첫 번째 요소에 대한 상수 참조(l-\/value)를 반환합니다. 
 
 \begin{DoxyReturn}{Returns}
-컨테이너의 첫 번째 원소에 대한 l-\/value 상수 참조 
+첫 번째 원소에 대한 상수 참조(l-\/value)입니다. 
 \end{DoxyReturn}
+\begin{DoxyDate}{Date}
+2023-\/12-\/01 
+\end{DoxyDate}
 \Hypertarget{class_static_array_af31a1ffafe5932a04ba7452c85cdbbc7}\label{class_static_array_af31a1ffafe5932a04ba7452c85cdbbc7} 
 \index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!GetPtr@{GetPtr}}
 \index{GetPtr@{GetPtr}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
 \doxysubsubsection{\texorpdfstring{GetPtr()}{GetPtr()}}
 {\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
-constexpr Element\+Type \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+Get\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+constexpr \mbox{\hyperlink{class_static_array_ad9faea26cf83fbb0471d46044a6b7c65}{Element\+Type}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+Get\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
 
 
 
-현재 컨테이너의 첫 번째 원소 주소를 반환한다. 
+정적 배열의 첫 번째 요소에 대한 포인터를 반환합니다. 
 
 \begin{DoxyReturn}{Returns}
-첫 번째 원소의 주소 
+정적 배열의 첫 번째 요소에 대한 포인터입니다. 
 \end{DoxyReturn}
+\begin{DoxyDate}{Date}
+2023-\/12-\/01 
+\end{DoxyDate}
 \Hypertarget{class_static_array_a64e3d85b3298c1d60c2dfb8f61f2ea0a}\label{class_static_array_a64e3d85b3298c1d60c2dfb8f61f2ea0a} 
 \index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!GetSize@{GetSize}}
 \index{GetSize@{GetSize}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
 \doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}}
 {\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
-constexpr Size\+Type \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+constexpr \mbox{\hyperlink{class_static_array_ae19717695f3d3d41ea27e91c4b6e1419}{Size\+Type}} \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
 
 
 
-현재 컨테이너의 크기를 반환한다. 
+정적 배열의 크기를 반환합니다. 
 
 \begin{DoxyReturn}{Returns}
-현재 컨테이너의 크기 
+정적 배열의 크기({\ttfamily Size} )입니다. 
 \end{DoxyReturn}
+\begin{DoxyDate}{Date}
+2023-\/12-\/01 
+\end{DoxyDate}
+\Hypertarget{class_static_array_a1932eb3444437a651f0bce85bc23b85b}\label{class_static_array_a1932eb3444437a651f0bce85bc23b85b} 
+\index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!IsValidIndex@{IsValidIndex}}
+\index{IsValidIndex@{IsValidIndex}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
+\doxysubsubsection{\texorpdfstring{IsValidIndex()}{IsValidIndex()}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
+static constexpr bool \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::\+Is\+Valid\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_static_array_ae19717695f3d3d41ea27e91c4b6e1419}{Size\+Type}}}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+{\ttfamily index} 를 받아, 유효한 인덱스인지 검사합니다. 
+
+\begin{DoxyNote}{Note}
+0 이상, \#\+Size 미만의 {\ttfamily index} 를 {\itshape 유효하다(\+Valid)} 라고 정의합니다. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em index} & 검사할 인덱스 값입니다. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily index} 가 유효한 인덱스면 참(true), 유효하지 않으면 거짓(false)입니다. 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+2023-\/12-\/01 
+\end{DoxyDate}
 \Hypertarget{class_static_array_afbad5ff940975a89a3fb6500a8ee9a30}\label{class_static_array_afbad5ff940975a89a3fb6500a8ee9a30} 
 \index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!operator=@{operator=}}
 \index{operator=@{operator=}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
@@ -305,39 +473,57 @@ Copy-\/\+Assignable.
 \index{operator\mbox{[}\mbox{]}@{operator[]}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
 \doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
-constexpr Element\+Type \& \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{Size\+Type}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+constexpr \mbox{\hyperlink{class_static_array_ad9faea26cf83fbb0471d46044a6b7c65}{Element\+Type}} \& \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_static_array_ae19717695f3d3d41ea27e91c4b6e1419}{Size\+Type}}}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
 
 
 
-{\ttfamily index} 로 지정된 위치의 요소에 대한 참조를 반환한다. 
+정적 배열의 {\ttfamily index} 로 지정된 위치의 요소에 대한 참조(l-\/value)를 반환합니다.   
 
+\begin{DoxyNote}{Note}
+정적 배열의 아래 첨자 연산자(Subscript Operator, {\ttfamily \mbox{[}\mbox{]}})에 대한 오버로딩입니다. 
+\end{DoxyNote}
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em index} & 접근할 요소의 인덱스 값 \\
+\mbox{\texttt{ in}}  & {\em index} & 접근할 요소의 인덱스 값입니다. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily index} 로 지정된 위치의 요소에 대한 참조(l-\/value) 입니다. 
+\end{DoxyReturn}
 \begin{DoxyWarning}{Warning}
-유효한 {\ttfamily index} 인지 검사하지 않는다. 
+{\ttfamily index} 의 유효성을 검사하지 않습니다. {\ttfamily index} 의 유효성을 검사하고 싶으면 \doxylink{class_static_array_ac8004068309188762a2eff4a8b3222d8}{Static\+Array\+::\+At(\+Size\+Type)} 을 사용하십시오. 
 \end{DoxyWarning}
+\begin{DoxyDate}{Date}
+2023-\/12-\/01 
+\end{DoxyDate}
 \Hypertarget{class_static_array_a01ed578ae36779c3a70fba79004b0588}\label{class_static_array_a01ed578ae36779c3a70fba79004b0588} 
 \index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
 \index{operator\mbox{[}\mbox{]}@{operator[]}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
 \doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
-constexpr const Element\+Type \& \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{Size\+Type}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+constexpr const \mbox{\hyperlink{class_static_array_ad9faea26cf83fbb0471d46044a6b7c65}{Element\+Type}} \& \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_static_array_ae19717695f3d3d41ea27e91c4b6e1419}{Size\+Type}}}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
 
 
 
-{\ttfamily index} 로 지정된 위치의 요소에 대한 상수 참조를 반환한다. 
+정적 배열의 {\ttfamily index} 로 지정된 위치의 요소에 대한 상수 참조(l-\/value)를 반환합니다.   
 
+\begin{DoxyNote}{Note}
+정적 배열의 아래 첨자 연산자(Subscript Operator, {\ttfamily \mbox{[}\mbox{]}})에 대한 오버로딩입니다. 
+\end{DoxyNote}
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em index} & 접근할 요소의 인덱스 값 \\
+\mbox{\texttt{ in}}  & {\em index} & 접근할 요소의 인덱스 값입니다. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily index} 로 지정된 위치의 요소에 대한 상수 참조(l-\/value) 입니다. 
+\end{DoxyReturn}
 \begin{DoxyWarning}{Warning}
-유효한 {\ttfamily index} 인지 검사하지 않는다. 
+{\ttfamily index} 의 유효성을 검사하지 않습니다. {\ttfamily index} 의 유효성을 검사하고 싶으면 \doxylink{class_static_array_ab7095adf7625cf754024b64738f8bcdc}{Static\+Array\+::\+At(\+Size\+Type) const} 을 사용하십시오. 
 \end{DoxyWarning}
+\begin{DoxyDate}{Date}
+2023-\/12-\/01 
+\end{DoxyDate}
 \Hypertarget{class_static_array_aaffa96c04ba99bfa22c470ba03774c69}\label{class_static_array_aaffa96c04ba99bfa22c470ba03774c69} 
 \index{StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}!Swap@{Swap}}
 \index{Swap@{Swap}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
@@ -347,13 +533,16 @@ constexpr void \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $
 
 
 
-현재 컨테이너의 내용을 {\ttfamily other} 컨테이너의 내용과 교체한다. 
+현재 정적 배열의 내용을 다른 정적 배열의 내용({\ttfamily other} )과 교체(\+Swap)합니다. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em other} & 현재 컨테이너와 교체할 컨테이너 \\
+{\em other} & 교체할 다른 정적 배열에 대한 참조(l-\/value)입니다. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyDate}{Date}
+2023-\/12-\/01 
+\end{DoxyDate}
 
 
 \doxysubsection{Friends And Related Symbol Documentation}
@@ -362,7 +551,7 @@ constexpr void \mbox{\hyperlink{class_static_array}{Static\+Array}}$<$ T, Size $
 \index{Begin@{Begin}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
 \doxysubsubsection{\texorpdfstring{Begin()}{Begin()}}
 {\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
-constexpr \mbox{\hyperlink{class___static_array___iterator}{Iterator}} Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [related]}}
+constexpr \mbox{\hyperlink{class_static_array_a3b32b885b333e6bc64d37a60bf3e6751}{Iterator}} Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [related]}}
 
 
 
@@ -376,7 +565,7 @@ constexpr \mbox{\hyperlink{class___static_array___iterator}{Iterator}} Begin (\b
 \index{End@{End}!StaticArray$<$ T, Size $>$@{StaticArray$<$ T, Size $>$}}
 \doxysubsubsection{\texorpdfstring{End()}{End()}}
 {\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Size$>$ \\
-constexpr \mbox{\hyperlink{class___static_array___iterator}{Iterator}} End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [related]}}
+constexpr \mbox{\hyperlink{class_static_array_a3b32b885b333e6bc64d37a60bf3e6751}{Iterator}} End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [related]}}
 
 
 
@@ -389,4 +578,4 @@ constexpr \mbox{\hyperlink{class___static_array___iterator}{Iterator}} End (\beg
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-DSAG/\+Includes/\mbox{\hyperlink{_static_array_8h}{Static\+Array.\+h}}\end{DoxyCompactItemize}
+E\+:/\+RZN/\+PROJECTS/\+RZNDSAG/\+DSAG/\+Includes/\mbox{\hyperlink{_static_array_8h}{Static\+Array.\+h}}\end{DoxyCompactItemize}

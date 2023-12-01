@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['staticarray_0',['staticarray',['../class_static_array.html#a055353f7cfbfe114aeab162941d0f64b',1,'StaticArray::StaticArray()=default'],['../class_static_array.html#a4f8a6f63d1957478082d87e9bd0a6a05',1,'StaticArray::StaticArray(const StaticArray &amp;right)'],['../class_static_array.html#a01788362dfb47c5bb3b1bd62dd0d11f2',1,'StaticArray::StaticArray(const StaticArray &amp;&amp;to_move) noexcept']]],
-  ['swap_1',['Swap',['../class_static_array.html#aaffa96c04ba99bfa22c470ba03774c69',1,'StaticArray']]]
+  ['rgraph_0',['RGraph',['../class_r_graph.html#a1a2bac6f6e5d5b4fc813860fbbd777a7',1,'RGraph']]],
+  ['runionfind_1',['RUnionFind',['../class_r_union_find.html#a450627dd3b9d8d92668ebfaef5fd67d3',1,'RUnionFind']]]
 ];

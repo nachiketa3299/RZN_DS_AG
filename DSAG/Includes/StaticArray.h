@@ -136,18 +136,42 @@ private:
     SizeType offset;
 };
 
-/// @short 고정 크기 배열을 캡슐화하는 컨테이너
+/*!
+ * @short 정적 배열(고정 크기 배열, Static Array)을 캡슐화하는 컨테이너입니다.
+ * @details 요소의 개수가 @p Size 개인 @p T 형 배열을 래핑합니다.
+ * @tparam T 정적 배열의 각 요소의 자료형입니다.
+ * @tparam Size 정적 배열의 크기(요소의 갯수)입니다.
+ * @date 2023-12-01
+*/
 template <typename T, std::size_t Size>
 class StaticArray
 {
 public: // Type Alias
+    /*!
+     * @brief 정적 배열의 각 요소의 자료형입니다.
+     * @date 2023-12-01
+    */
     using ElementType = T;
+
+    /*!
+     * @brief 정적 배열의 크기(요소의 갯수)입니다.
+     * @date 2023-12-01
+    */
     using SizeType = std::size_t;
 
+    /*!
+     * @brief 정적 배열의 정방향 순회 방법을 제공하는 반복자입니다.
+     * @see @ref _StaticArray_Iterator
+     * @date 2023-12-01
+    */
     using Iterator = _StaticArray_Iterator<T, Size>;
-    using ReverseIterator = int;
 
-    using DifferenceType = std::ptrdiff_t;
+    /*!
+     * @brief 정적 배열의 역방향 순회 방법을 제공하는 반복자입니다.
+     * @todo 구현되어 있지 않습니다.
+     * @date 2023-12-01
+    */
+    using ReverseIterator = int;
 
 public:
     /*!
@@ -201,9 +225,18 @@ public:
         return *this;
     };
 
+    /*!
+     * @brief 정적 배열의 소멸자(Destructor)입니다.
+     * @date 2023-12-01
+    */
     ~StaticArray() = default;
 
 public:
+    /*!
+     * @brief 정적 배열을 선언과 동시에 모든 요소를 @p to_fill 값으로 설정합니다.
+     * @param to_fill 정적 배열의 모든 요소가 이 값으로 초기화 됩니다.
+     * @date 2023-12-01
+    */
     StaticArray(const T& to_fill) 
     {
         for (SizeType i = DSAG_ARRAY_START_INDEX; i < DSAG_ARRAY_LAST_RANGE; ++i)
@@ -213,9 +246,12 @@ public:
 
 public: // Element Access
     /*!
-     * @brief \p index 로 지정된 위치의 요소에 대한 참조를 반환한다.
-     * @param[in] index 접근할 요소의 인덱스 값
-     * @warning 유효한 \p index 인지 검사하지 않는다.
+     * @copybrief StaticArray::At(SizeType)
+     * @note 정적 배열의 아래 첨자 연산자(Subscript Operator, `[]`)에 대한 오버로딩입니다.
+     * @param[in] index 접근할 요소의 인덱스 값입니다.
+     * @return @p index 로 지정된 위치의 요소에 대한 참조(l-value) 입니다.
+     * @warning @p index 의 유효성을 검사하지 않습니다. @p index 의 유효성을 검사하고 싶으면 @ref StaticArray::At(SizeType) 을 사용하십시오.
+     * @date 2023-12-01
     */
     constexpr ElementType& operator[](SizeType index)
     {
@@ -223,9 +259,12 @@ public: // Element Access
     };
 
     /*!
-     * @brief \p index 로 지정된 위치의 요소에 대한 상수 참조를 반환한다.
-     * @param[in] index 접근할 요소의 인덱스 값
-     * @warning 유효한 \p index 인지 검사하지 않는다.
+     * @copybrief StaticArray::At(SizeType) const
+     * @note 정적 배열의 아래 첨자 연산자(Subscript Operator, `[]`)에 대한 오버로딩입니다.
+     * @param[in] index 접근할 요소의 인덱스 값입니다.
+     * @return @p index 로 지정된 위치의 요소에 대한 상수 참조(l-value) 입니다.
+     * @warning @p index 의 유효성을 검사하지 않습니다. @p index 의 유효성을 검사하고 싶으면 @ref StaticArray::At(SizeType) const 을 사용하십시오.
+     * @date 2023-12-01
     */
     constexpr const ElementType& operator[](SizeType index) const
     {
@@ -233,30 +272,35 @@ public: // Element Access
     };
 
     /*!
-     * @brief \p index 로 지정된 위치의 요소에 대한 참조를 반환한다.
-     * @param[in] index 접근할 요소의 인덱스 값
-     * @note 유효한 \p index 범위를 검사한다.   
+     * @brief 정적 배열의 @p index 로 지정된 위치의 요소에 대한 참조(l-value)를 반환합니다.
+     * @param[in] index 접근할 요소의 인덱스 값입니다.
+     * @return @p index 로 지정된 위치의 요소에 대한 참조(l-value) 입니다.
+     * @note @p index 의 유효성을 검사합니다.
+     * @date 2023-12-01
     */
     constexpr ElementType& At(SizeType index) 
     { 
-        assert(index >= 0 && index < Size);
+        assert(StaticArray::IsValidIndex(index), "유효하지 않은 index 입니다.");
         return this->elements[index]; 
     };
 
     /*!
-     * @brief \p index 로 지정된 위치의 요소에 대한 상수 참조를 반환한다.
-     * @param[in] index 접근할 요소의 인덱스 값
-     * @note 유효한 \p index 범위를 검사한다.   
+     * @brief 정적 배열의 \p index 로 지정된 위치의 요소에 대한 상수 참조(l-value)를 반환합니다.
+     * @param[in] index 접근할 요소의 인덱스 값입니다.
+     * @return \p index 로 지정된 위치의 요소에 대한 상수 참조(l-value) 입니다.
+     * @note \p index 의 유효성을 검사합니다.
+     * @date 2023-12-01
     */
     constexpr const ElementType& At(SizeType index) const 
     { 
-        assert(index >= 0 && index < Size);
+        assert(StaticArray::IsValidIndex(index), "유효하지 않은 index 입니다.");
         return this->elements[index]; 
     };
 
     /*!
-     * @brief 컨테이너의 첫 번째 요소에 대한 참조를 반환한다.
-     * @return 컨테이너의 첫 번째 원소에 대한 l-value 참조
+     * @brief 정적 배열의 첫 번째 요소에 대한 참조(l-value)를 반환합니다.
+     * @return 첫 번째 요소에 대한 참조(l-value)입니다.
+     * @date 2023-12-01
     */
     constexpr ElementType& Front() 
     { 
@@ -264,8 +308,9 @@ public: // Element Access
     };
 
     /*!
-     * @brief 컨테이너의 첫 번째 요소에 대한 상수 참조를 반환한다.
-     * @return 컨테이너의 첫 번째 원소에 대한 l-value 상수 참조
+     * @brief 정적 배열의 첫 번째 요소에 대한 상수 참조(l-value)를 반환합니다.
+     * @return 첫 번째 원소에 대한 상수 참조(l-value)입니다.
+     * @date 2023-12-01
     */
     constexpr const ElementType& Front() const 
     { 
@@ -273,8 +318,9 @@ public: // Element Access
     };
 
     /*!
-     * @brief 컨테이너의 마지막 요소에 대한 참조를 반환한다.
-     * @return 컨테이너의 마지막 원소에 대한 l-value 참조
+     * @brief 정적 배열의 마지막 요소에 대한 참조(l-value)를 반환합니다.
+     * @return 마지막 요소에 대한 참조(l-value)입니다.
+     * @date 2023-12-01
     */
     constexpr ElementType& Back() 
     { 
@@ -282,8 +328,9 @@ public: // Element Access
     };
 
     /*!
-     * @brief 컨테이너의 마지막 원소에 대한 상수 참조를 반환한다.
-     * @return 컨테이너의 마지막 원소에 대한 l-value 상수 참조
+     * @brief 정적 배열의 마지막 요소에 대한 상수 참조(l-value)를 반환합니다.
+     * @return 마지막 요소에 대한 상수 참조(l-value)입니다.
+     * @date 2023-12-01
     */
     constexpr const ElementType& Back() const 
     { 
@@ -291,21 +338,33 @@ public: // Element Access
     };
 
     /*!
-     * @brief \p range_start 이상 \p range_end 미만의 원소를 \p to_fill 로 채운다.
-     * @param[in] to_fill 채울 값
-     * @param[in] range_start 채울 범위의 시작 인덱스
-     * @param[in] range_end 채울 범위의 마지막 인덱스 + 1
+     * @brief 정적 배열의 @p range_start_index 이상 @p range_last 미만의 요소를 값 @p to_fill 로 채웁니다(Fill).
+     * @details
+     * @p range_start_index 와 @p range_last 는 다음을 만족해야 합니다:
+     * @f(
+     * 0 \leq \verb|range_start_index| < \verb|range_last| \leq \verb|Size|
+     * @f)
+     * @param[in] to_fill 설정할 값 입니다.
+     * @param[in] range_start_index (Optional) 채울 범위의 시작 인덱스 입니다. 기본 값은 #DSAG_ARRAY_START_INDEX 입니다.
+     * @param[in] range_last (Optional) 채울 범위의 끝 입니다. 채울 범위의 마지막 인덱스에 1을 더한 값입니다. 기본 값은 @p Size 입니다.
+     * @todo 반복자 버전의 오버로딩이 필요하다.
+     * @date 2023-12-01
     */
-    constexpr void FillRange(const ElementType& to_fill, SizeType range_start = DSAG_ARRAY_START_INDEX, SizeType range_end = Size)
+    constexpr void FillRange(const ElementType& to_fill, SizeType range_start_index = DSAG_ARRAY_START_INDEX, SizeType range_last = Size)
     {
-        for (SizeType i = range_start; i < range_end; ++i)
+        assert(StaticArray::IsValidIndex(range_start_index), "range_start_index 가 유효한 인덱스가 아닙니다.");
+        assert(range_last <= Size, "range_last 가 정적 배열의 범위를 벗어납니다.");
+        assert(range_start_index < range_last, "range_last는 항상 range_start_index 보다 커야 합니다.");
+
+        for (SizeType i = range_start_index; i < range_last; ++i)
             this->elements[i] = to_fill;
         return;
     }
 
     /*!
-     * @brief 현재 컨테이너의 내용을 \p other 컨테이너의 내용과 교체한다.
-     * @param other 현재 컨테이너와 교체할 컨테이너
+     * @brief 현재 정적 배열의 내용을 다른 정적 배열의 내용(\p other )과 교체(Swap)합니다.
+     * @param other 교체할 다른 정적 배열에 대한 참조(l-value)입니다.
+     * @date 2023-12-01
     */
     constexpr void Swap(StaticArray& other) noexcept
     {
@@ -319,8 +378,9 @@ public: // Element Access
     }
 
     /*!
-     * @brief 현재 컨테이너의 첫 번째 원소 주소를 반환한다.
-     * @return 첫 번째 원소의 주소
+     * @brief 정적 배열의 첫 번째 요소에 대한 포인터를 반환합니다.
+     * @return 정적 배열의 첫 번째 요소에 대한 포인터입니다.
+     * @date 2023-12-01
     */
     constexpr ElementType* GetPtr() noexcept
     {
@@ -328,12 +388,25 @@ public: // Element Access
     }
 
     /*!
-     * @brief 현재 컨테이너의 크기를 반환한다.
-     * @return 현재 컨테이너의 크기
+     * @brief 정적 배열의 크기를 반환합니다.
+     * @return 정적 배열의 크기(\p Size )입니다.
+     * @date 2023-12-01
     */
     constexpr SizeType GetSize() const noexcept
     {
         return Size;
+    }
+
+    /*!
+     * @brief \p index 를 받아, 유효한 인덱스인지 검사합니다.
+     * @note 0 이상, #Size 미만의 \p index 를 *유효하다(Valid)* 라고 정의합니다.
+     * @param index 검사할 인덱스 값입니다.
+     * @return \p index 가 유효한 인덱스면 참(true), 유효하지 않으면 거짓(false)입니다.
+     * @date 2023-12-01
+    */
+    inline static constexpr bool IsValidIndex(SizeType index)
+    {
+        return (0 <= index && index < Size);
     }
 
 public:
